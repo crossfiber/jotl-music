@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<!-- Jake on the Lake — South Florida Live Music Duo · v1.0 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>South Florida Live Music Duo for Weddings & Breweries | Jake on the Lake</title>
+<meta name="description" content="Pembroke Pines country-rock live music duo for weddings, breweries, private parties & corporate events across South Florida. Five+ vocalists, 200+ song catalog. Call 305-965-7311.">
+<meta name="keywords" content="south florida live music duo, pembroke pines wedding band, country rock live band florida, brewery live music miami, fort lauderdale wedding band, private party live music south florida, jake on the lake, jotl music, florida acoustic duo">
+<meta name="author" content="Jake on the Lake Entertainment, Inc.">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="US-FL">
+<meta name="geo.placename" content="Pembroke Pines, FL">
+<meta name="geo.position" content="26.0078;-80.2962">
+<meta name="ICBM" content="26.0078, -80.2962">
+<link rel="canonical" href="https://crossfiber.github.io/jotl-music/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="South Florida Live Music Duo for Weddings & Breweries | Jake on the Lake">
+<meta property="og:description" content="Pembroke Pines country-rock live band. Weddings, breweries, private events from Miami to the Blue Ridge.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://crossfiber.github.io/jotl-music/">
+<meta property="og:site_name" content="Jake on the Lake">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://crossfiber.github.io/jotl-music/assets/hero-group.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jake on the Lake — South Florida Live Music Duo">
+<meta name="twitter:description" content="Country-rock live band for weddings, breweries, private events. Pembroke Pines, FL.">
+<meta name="twitter:image" content="https://crossfiber.github.io/jotl-music/assets/hero-group.jpg">
+
+<!-- Favicon (acoustic-guitar logo) -->
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="apple-touch-icon" href="assets/logo.png">
+
+<!-- Fonts: Big Shoulders Display (headlines), Hanken Grotesk (body), Caveat (handwritten accent) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Hanken+Grotesk:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome 6 -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    /* Brand palette — see design-direction.md for sourcing */
+    --cream: #F4ECD8;          /* page bg — aged paper / guitar-case lining */
+    --cream-warm: #EDE2C7;     /* alt-section bg */
+    --cypress: #0F1A14;        /* dark warm green — section bg dark */
+    --cypress-deep: #07100B;   /* footer bg */
+    --moss: #3A5A40;           /* secondary cypress moss */
+    --saddle: #5C3A1E;         /* leather brown — typographic */
+    --amber: #C76E2A;          /* sunset amber — CTAs only */
+    --amber-hot: #B05E1F;      /* CTA hover */
+    --ink: #1B1410;            /* dark warm text on cream */
+    --bone: #EFE8DA;           /* off-white text on dark bg */
+    --bone-mute: rgba(239, 232, 218, 0.72);
+    --line: rgba(27, 20, 16, 0.12);
+    --line-dark: rgba(239, 232, 218, 0.14);
+    --shadow-sm: 0 1px 2px rgba(27,20,16,0.06), 0 4px 14px rgba(27,20,16,0.06);
+    --shadow-md: 0 6px 18px rgba(27,20,16,0.10), 0 18px 48px rgba(27,20,16,0.10);
+    --nav-h: 84px;
+    --nav-h-sm: 68px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--nav-h) + 16px);
+  }
+  @media (max-width: 768px) {
+    html { scroll-padding-top: calc(var(--nav-h-sm) + 12px); }
+  }
+
+  body {
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Big Shoulders Display', system-ui, sans-serif;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.005em;
+    text-transform: uppercase;
+  }
+  h1 { font-weight: 900; }
+
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+
+  .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+  @media (max-width: 768px) { .container { padding: 0 20px; } }
+
+  /* ========== NAV ========== */
+  nav.site-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    height: var(--nav-h);
+    display: flex; align-items: center;
+    padding: 0 32px;
+    background: transparent;
+    transition: background 0.25s ease, box-shadow 0.25s ease, height 0.25s ease;
+  }
+  nav.site-nav.scrolled {
+    background: rgba(15, 26, 20, 0.96);
+    box-shadow: 0 2px 24px rgba(0,0,0,0.18);
+    height: 70px;
+  }
+  .nav-inner {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px;
+  }
+  .nav-logo {
+    display: flex; align-items: center;
+    text-decoration: none;
+    height: 50px;
+  }
+  .nav-logo img {
+    height: 100%; width: auto;
+    filter: invert(1) drop-shadow(0 2px 4px rgba(0,0,0,0.45));
+  }
+  nav.site-nav.scrolled .nav-logo img,
+  nav.site-nav.solid .nav-logo img {
+    filter: invert(1) drop-shadow(0 1px 2px rgba(0,0,0,0.3));
+  }
+  .nav-links {
+    display: flex; gap: 32px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--bone);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    transition: color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--amber); }
+  .nav-right { display: flex; gap: 14px; align-items: center; }
+  .nav-phone {
+    color: var(--bone);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.04em;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .nav-phone:hover { color: var(--amber); }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 10px;
+    padding: 13px 24px;
+    background: var(--amber);
+    color: #fff !important;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 14px rgba(199,110,42,0.35);
+  }
+  .btn:hover { background: var(--amber-hot); transform: translateY(-2px); box-shadow: 0 8px 22px rgba(199,110,42,0.45); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--bone) !important;
+    border: 2px solid var(--bone);
+    box-shadow: none;
+  }
+  .btn-ghost:hover {
+    background: var(--bone);
+    color: var(--ink) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+  }
+  .btn-on-cream {
+    color: #fff !important;
+  }
+  .btn-ghost-cream {
+    background: transparent;
+    color: var(--ink) !important;
+    border: 2px solid var(--ink);
+    box-shadow: none;
+  }
+  .btn-ghost-cream:hover {
+    background: var(--ink);
+    color: var(--cream) !important;
+  }
+  .btn-sm { padding: 10px 18px; font-size: 0.86rem; }
+
+  /* Hamburger + mobile actions */
+  .mobile-actions { display: none; gap: 10px; align-items: center; }
+  .mobile-call {
+    width: 44px; height: 44px;
+    border-radius: 50%;
+    background: var(--amber);
+    color: #fff;
+    display: inline-flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(199,110,42,0.4);
+  }
+  .hamburger {
+    width: 44px; height: 44px;
+    background: transparent;
+    border: 2px solid var(--bone);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 5px;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+  }
+  nav.site-nav.scrolled .hamburger,
+  nav.site-nav.solid .hamburger {
+    border-color: var(--bone);
+    background: rgba(15,26,20,0.4);
+  }
+  .hamburger span {
+    display: block;
+    width: 22px; height: 2.5px;
+    background: var(--bone);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  /* Drawer */
+  .nav-drawer {
+    position: fixed;
+    top: 0; right: 0;
+    width: 360px;
+    max-width: 90vw;
+    height: 100dvh;
+    background: var(--cream);
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(.2,.8,.2,1);
+    display: flex; flex-direction: column;
+    box-shadow: -2px 0 28px rgba(0,0,0,0.25);
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .nav-drawer.open { transform: translateX(0); }
+  .drawer-header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  .drawer-header img { height: 56px; width: auto; }
+  .drawer-close {
+    background: none; border: none;
+    font-size: 1.5rem;
+    color: var(--ink);
+    cursor: pointer;
+    width: 44px; height: 44px;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .drawer-close:hover { color: var(--amber); }
+  .drawer-links {
+    display: flex; flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+  }
+  .drawer-links a {
+    display: block;
+    padding: 18px 24px;
+    text-decoration: none;
+    color: var(--ink);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 800;
+    font-size: 1.7rem;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+  }
+  .drawer-links a:hover {
+    background: var(--cream-warm);
+    color: var(--amber);
+    padding-left: 32px;
+  }
+  .drawer-footer {
+    padding: 22px 24px;
+    border-top: 1px solid var(--line);
+    background: var(--cream-warm);
+    display: flex; flex-direction: column; gap: 14px;
+  }
+  .drawer-phone {
+    color: var(--saddle);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.05rem;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .drawer-phone i { color: var(--amber); }
+  .drawer-cta { width: 100%; }
+  .nav-overlay {
+    position: fixed; inset: 0;
+    background: rgba(7, 16, 11, 0.62);
+    z-index: 1000;
+    display: none;
+  }
+  .nav-overlay.open { display: block; }
+  body.drawer-open { overflow: hidden; }
+  body.drawer-open .mobile-actions { visibility: hidden; }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    min-height: 100dvh;
+    color: var(--bone);
+    padding: calc(var(--nav-h) + 32px) 32px 88px;
+    overflow: hidden;
+    background: var(--cypress);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center 28%;
+    z-index: 0;
+    transition: background-image 0.5s ease, opacity 0.5s ease;
+  }
+  .hero-bg.active {
+    /* set via JS */
+  }
+  .hero-bg-overlay {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(105deg, rgba(15,26,20,0.95) 0%, rgba(15,26,20,0.78) 38%, rgba(15,26,20,0.42) 65%, rgba(15,26,20,0.30) 100%),
+      linear-gradient(0deg, rgba(15,26,20,0.6) 0%, rgba(15,26,20,0) 35%);
+    z-index: 1;
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items: center;
+    min-height: calc(100dvh - var(--nav-h) - 120px);
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--amber);
+    margin-bottom: 8px;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: inline-block; width: 36px; height: 2px; background: var(--amber);
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.6vw, 5.4rem);
+    color: var(--bone);
+    margin-bottom: 22px;
+    letter-spacing: -0.01em;
+  }
+  .hero h1 .accent {
+    color: var(--amber);
+    display: inline-block;
+  }
+  .hero h1 .stack {
+    display: block;
+  }
+  .hero p.lede {
+    font-size: 1.18rem;
+    line-height: 1.55;
+    color: var(--bone-mute);
+    max-width: 620px;
+    margin-bottom: 32px;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 38px; }
+  .hero-ctas .btn { padding: 16px 28px; font-size: 1rem; }
+
+  /* Event-type selector — the signature element */
+  .event-picker {
+    background: rgba(7, 16, 11, 0.55);
+    border: 1px solid var(--line-dark);
+    border-radius: 10px;
+    padding: 24px 22px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  }
+  .event-picker-label {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    color: var(--amber);
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+  .event-picker-chips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .event-chip {
+    background: rgba(239, 232, 218, 0.06);
+    color: var(--bone);
+    border: 1.5px solid var(--line-dark);
+    padding: 14px 12px;
+    border-radius: 6px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex; align-items: center; gap: 10px;
+    text-align: left;
+  }
+  .event-chip i { color: var(--amber); font-size: 1.1rem; }
+  .event-chip:hover {
+    border-color: var(--amber);
+    background: rgba(199, 110, 42, 0.08);
+  }
+  .event-chip.active {
+    border-color: var(--amber);
+    background: rgba(199, 110, 42, 0.18);
+    color: #fff;
+  }
+  .event-meta {
+    border-top: 1px solid var(--line-dark);
+    padding-top: 14px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.92rem;
+    color: var(--bone-mute);
+    line-height: 1.5;
+    min-height: 56px;
+  }
+  .event-meta strong {
+    display: block;
+    color: var(--bone);
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+
+  /* Trust ribbon — overlapping bottom of hero */
+  .trust-ribbon {
+    position: relative;
+    z-index: 4;
+    max-width: 1140px;
+    margin: -48px auto 0;
+    background: var(--saddle);
+    color: var(--cream);
+    padding: 22px 36px;
+    border-radius: 4px;
+    display: flex; align-items: center; gap: 24px;
+    box-shadow: 0 18px 40px rgba(7,16,11,0.42);
+    border-left: 4px solid var(--amber);
+  }
+  .trust-ribbon i { color: var(--amber); font-size: 1.4rem; flex-shrink: 0; }
+  .trust-ribbon p {
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.35;
+    margin: 0;
+  }
+  .trust-ribbon p strong { font-weight: 700; color: var(--amber); }
+
+  /* ========== SECTION SHELL ========== */
+  section {
+    padding: 96px 32px;
+  }
+  @media (max-width: 768px) {
+    section { padding: 64px 20px; }
+  }
+  section.dark {
+    background: var(--cypress);
+    color: var(--bone);
+  }
+  section.cream-warm { background: var(--cream-warm); }
+
+  .section-eyebrow {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .section-headline {
+    font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+    color: var(--ink);
+    margin-bottom: 18px;
+    letter-spacing: -0.005em;
+  }
+  section.dark .section-headline { color: var(--bone); }
+
+  /* ========== ORIGIN STORY ========== */
+  .origin {
+    position: relative;
+    color: var(--bone);
+    padding: 0;
+    background: var(--cypress);
+    overflow: hidden;
+  }
+  .origin-bg {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(98deg, rgba(15,26,20,0.92) 0%, rgba(15,26,20,0.70) 45%, rgba(15,26,20,0.20) 80%, rgba(15,26,20,0) 100%),
+      url('https://static.wixstatic.com/media/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg/v1/fill/w_1800,h_1200,al_c,q_85/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .origin-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 130px 32px;
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .origin-text { max-width: 620px; }
+  .origin-text .section-headline { color: var(--bone); margin-bottom: 24px; }
+  .origin-text p {
+    font-size: 1.12rem;
+    line-height: 1.7;
+    color: var(--bone-mute);
+    margin-bottom: 18px;
+  }
+  .origin-text p strong { color: var(--bone); font-weight: 600; }
+  .origin-quote {
+    margin-top: 28px;
+    padding-left: 22px;
+    border-left: 3px solid var(--amber);
+    font-family: 'Caveat', cursive;
+    font-weight: 500;
+    font-size: 1.55rem;
+    line-height: 1.4;
+    color: var(--cream);
+  }
+  .origin-quote span {
+    display: block;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    margin-top: 10px;
+  }
+
+  /* ========== WHAT WE PLAY (genres) ========== */
+  .genres-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.42fr 0.58fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .genres-intro p {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: var(--ink);
+    opacity: 0.84;
+    margin-bottom: 24px;
+  }
+  .genre-tabs {
+    display: flex; gap: 10px;
+    margin-top: 8px;
+  }
+  .genre-tab {
+    background: transparent;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .genre-tab:hover { background: var(--ink); color: var(--cream); }
+  .genre-tab.active { background: var(--amber); border-color: var(--amber); color: #fff; }
+
+  .genre-cards {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "country rock   pop"
+      "country sets   sets";
+    gap: 14px;
+  }
+  .genre-card {
+    background: var(--cypress);
+    color: var(--bone);
+    padding: 28px 24px;
+    border-radius: 6px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--cypress);
+  }
+  .genre-card.featured { grid-area: country; min-height: 380px; }
+  .genre-card.rock     { grid-area: rock; }
+  .genre-card.pop      { grid-area: pop; }
+  .genre-card.sets     {
+    grid-area: sets;
+    background: var(--cream);
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+    align-items: flex-start;
+  }
+  .genre-card .badge {
+    font-family: 'Caveat', cursive;
+    font-size: 1.15rem;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .genre-card h3 {
+    font-size: 1.6rem;
+    color: inherit;
+    margin-bottom: 8px;
+  }
+  .genre-card.featured h3 { font-size: 2.4rem; line-height: 0.95; }
+  .genre-card .desc {
+    font-size: 0.92rem;
+    color: var(--bone-mute);
+    line-height: 1.5;
+  }
+  .genre-card.sets .desc { color: var(--ink); opacity: 0.78; font-family: 'Hanken Grotesk',sans-serif; }
+  .genre-card .artists {
+    margin-top: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.85rem;
+    color: var(--bone-mute);
+    line-height: 1.55;
+  }
+  .genre-card.sets strong {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: var(--amber);
+    line-height: 1;
+    display: block;
+    margin-top: 6px;
+  }
+
+  /* ========== BAND ========== */
+  .band-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    max-width: 1240px;
+    margin: 40px auto 0;
+  }
+  .band-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background: var(--cypress);
+    box-shadow: var(--shadow-sm);
+  }
+  .band-card.featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: 1.05/1;
+  }
+  .band-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .band-card:hover img { transform: scale(1.04); }
+  .band-card .meta {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 22px 20px 18px;
+    background: linear-gradient(0deg, rgba(7,16,11,0.92) 0%, rgba(7,16,11,0.55) 60%, rgba(7,16,11,0) 100%);
+    color: var(--bone);
+  }
+  .band-card .meta h3 {
+    font-size: 1.25rem;
+    margin-bottom: 4px;
+    color: var(--cream);
+  }
+  .band-card.featured .meta h3 { font-size: 2.2rem; }
+  .band-card .meta .role {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--amber);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .band-card.featured .meta .role { font-size: 0.88rem; }
+
+  /* ========== EVENTS WE DO ========== */
+  .events-inner { max-width: 1240px; margin: 0 auto; }
+  .events-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "wedding brewery private"
+      "wedding vineyard vineyard";
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .event-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--bone);
+    min-height: 240px;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 26px 24px;
+    isolation: isolate;
+  }
+  .event-card.wedding { grid-area: wedding; min-height: 520px; }
+  .event-card.brewery { grid-area: brewery; }
+  .event-card.private { grid-area: private; }
+  .event-card.vineyard {
+    grid-area: vineyard;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 28px;
+  }
+  .event-card-bg {
+    position: absolute; inset: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+  .event-card:hover .event-card-bg { transform: scale(1.04); }
+  .event-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    z-index: -1;
+    background: linear-gradient(0deg, rgba(7,16,11,0.93) 0%, rgba(7,16,11,0.55) 55%, rgba(7,16,11,0.25) 100%);
+  }
+  .event-card.vineyard::before {
+    background: linear-gradient(90deg, rgba(7,16,11,0.93) 0%, rgba(7,16,11,0.7) 55%, rgba(7,16,11,0.4) 100%);
+  }
+  .event-card .badge {
+    font-family: 'Caveat', cursive;
+    color: var(--amber);
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .event-card h3 {
+    color: var(--cream);
+    font-size: 1.55rem;
+    margin-bottom: 8px;
+  }
+  .event-card.wedding h3 { font-size: 2.6rem; line-height: 0.95; margin-bottom: 12px; }
+  .event-card p {
+    font-size: 0.94rem;
+    color: var(--bone-mute);
+    margin-bottom: 16px;
+    line-height: 1.55;
+  }
+  .event-card.wedding p { font-size: 1.05rem; max-width: 420px; }
+  .event-card .micro-cta {
+    color: var(--amber);
+    font-weight: 700;
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .event-card .micro-cta i { transition: transform 0.2s ease; }
+  .event-card:hover .micro-cta i { transform: translateX(4px); }
+  .event-card.vineyard .vineyard-text { flex: 1; }
+  .event-card.vineyard h3 { margin-bottom: 4px; font-size: 1.5rem; }
+  .event-card.vineyard p { margin-bottom: 0; }
+
+  /* ========== ORIGINALS / MUSIC ========== */
+  .originals-inner { max-width: 1240px; margin: 0 auto; }
+  .originals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 40px;
+  }
+  .original-card {
+    background: var(--cream-warm);
+    border-radius: 8px;
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 24px;
+    align-items: start;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--line);
+  }
+  .original-art {
+    width: 160px; height: 160px;
+    border-radius: 6px;
+    background: var(--cypress);
+    color: var(--cream);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center; padding: 16px;
+    box-shadow: 0 10px 28px rgba(7,16,11,0.18);
+    flex-shrink: 0;
+  }
+  .original-art-1 { background: linear-gradient(135deg, var(--cypress) 0%, var(--moss) 100%); }
+  .original-art-2 { background: linear-gradient(135deg, var(--saddle) 0%, var(--amber) 100%); }
+  .original-art .small {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .original-art-2 .small { color: var(--cypress); }
+  .original-art h3 {
+    color: #fff; font-size: 1.5rem; line-height: 1; letter-spacing: -0.01em;
+  }
+  .original-meta .release {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--saddle);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .original-meta h3 {
+    font-size: 2rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+    line-height: 1;
+  }
+  .original-meta p {
+    font-size: 0.96rem;
+    line-height: 1.6;
+    color: var(--ink);
+    opacity: 0.78;
+    margin-bottom: 18px;
+  }
+  .stream-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .stream-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 14px;
+    background: var(--ink);
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 0.84rem;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  .stream-link:hover { background: var(--amber); transform: translateY(-2px); }
+  .stream-link i { font-size: 1rem; }
+
+  /* ========== WHERE WE'VE PLAYED ========== */
+  .marquee-wrap {
+    background: var(--cypress);
+    color: var(--bone);
+    padding: 72px 0 88px;
+    overflow: hidden;
+  }
+  .marquee-head {
+    max-width: 1240px;
+    margin: 0 auto 36px;
+    padding: 0 32px;
+  }
+  .marquee-track {
+    display: flex;
+    gap: 0;
+    animation: marquee 40s linear infinite;
+    white-space: nowrap;
+  }
+  .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+  .marquee-track span {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 7vw, 6rem);
+    color: var(--cream);
+    padding: 0 36px;
+    letter-spacing: -0.005em;
+    line-height: 1;
+    position: relative;
+  }
+  .marquee-track span::after {
+    content: '★';
+    color: var(--amber);
+    font-size: 0.4em;
+    margin-left: 36px;
+    vertical-align: middle;
+    line-height: 1;
+  }
+  .marquee-track span:nth-child(odd) { color: var(--amber); -webkit-text-stroke: 0; }
+  .marquee-track span:nth-child(odd)::after { color: var(--cream); }
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .anthems {
+    max-width: 1240px;
+    margin: 56px auto 0;
+    padding: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+  }
+  .anthems-label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--amber);
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .anthem-tag {
+    border: 1px solid var(--line-dark);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--bone);
+    letter-spacing: 0.04em;
+  }
+  .anthem-tag i { color: var(--amber); margin-right: 6px; }
+
+  /* ========== FAQ ========== */
+  .faq-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .faq-intro p {
+    font-size: 1.06rem;
+    line-height: 1.65;
+    color: var(--ink);
+    opacity: 0.82;
+  }
+  .faq-cta-row {
+    margin-top: 28px;
+    display: flex; gap: 12px; flex-wrap: wrap;
+  }
+  .accordion {
+    display: flex; flex-direction: column;
+    gap: 10px;
+  }
+  .accordion-item {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .accordion-item.open {
+    border-color: var(--saddle);
+  }
+  .accordion-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 18px 20px;
+    cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 1.02rem;
+    color: var(--ink);
+    text-align: left;
+    line-height: 1.4;
+  }
+  .accordion-header i {
+    color: var(--amber);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+  .accordion-item.open .accordion-header i { transform: rotate(180deg); }
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.32s ease;
+  }
+  .accordion-item.open .accordion-content { max-height: 700px; }
+  .accordion-text {
+    padding: 0 20px 20px;
+    color: var(--ink);
+    opacity: 0.82;
+    font-size: 0.96rem;
+    line-height: 1.65;
+  }
+
+  /* ========== CONTACT ========== */
+  .contact { background: var(--cypress); color: var(--bone); }
+  .contact-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; }
+  .form-group label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .form-group input, .form-group textarea, .form-group select {
+    padding: 13px 14px;
+    background: rgba(239, 232, 218, 0.05);
+    border: 1px solid var(--line-dark);
+    border-radius: 4px;
+    color: var(--bone);
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 0.98rem;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(239,232,218,0.42); }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--amber);
+    background: rgba(239, 232, 218, 0.08);
+  }
+  .form-group textarea { resize: vertical; min-height: 110px; }
+  .contact-form button { margin-top: 6px; align-self: flex-start; padding: 16px 30px; font-size: 1rem; }
+  .form-status {
+    font-size: 0.92rem;
+    padding: 10px 14px;
+    border-radius: 4px;
+    display: none;
+    margin-top: 6px;
+  }
+  .form-status.show { display: block; }
+  .form-status.success { background: rgba(58,90,64,0.25); border: 1px solid var(--moss); color: #C4D9C8; }
+  .form-status.error { background: rgba(199,110,42,0.18); border: 1px solid var(--amber); color: var(--cream); }
+
+  .contact-info { display: flex; flex-direction: column; gap: 28px; }
+  .info-block {
+    display: flex; gap: 14px;
+    align-items: flex-start;
+  }
+  .info-block i {
+    color: var(--amber);
+    font-size: 1.15rem;
+    margin-top: 4px;
+    flex-shrink: 0;
+    width: 22px; text-align: center;
+  }
+  .info-block h3 {
+    font-size: 1rem;
+    color: var(--bone);
+    margin-bottom: 4px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+  }
+  .info-block p, .info-block a {
+    color: var(--bone-mute);
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: block;
+  }
+  .info-block a:hover { color: var(--amber); }
+  address { font-style: normal; }
+  .social-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+  .social-row a {
+    width: 42px; height: 42px;
+    border-radius: 4px;
+    background: rgba(239,232,218,0.08);
+    color: var(--bone);
+    display: inline-flex; align-items: center; justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  .social-row a:hover { background: var(--amber); color: #fff; transform: translateY(-2px); }
+  .map-block {
+    margin-top: 8px;
+    aspect-ratio: 16/9;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--line-dark);
+  }
+  .map-block iframe { width: 100%; height: 100%; border: none; filter: grayscale(40%) saturate(0.85); }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--cypress-deep);
+    color: var(--bone-mute);
+    padding: 64px 32px 28px;
+  }
+  .footer-inner {
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 36px;
+  }
+  .footer-brand img {
+    height: 64px; width: auto;
+    margin-bottom: 18px;
+    filter: invert(1);
+  }
+  .footer-brand p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    max-width: 320px;
+  }
+  .footer-col h4 {
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: var(--amber);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 16px;
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col a {
+    color: var(--bone-mute);
+    text-decoration: none;
+    font-size: 0.92rem;
+    transition: color 0.2s ease;
+  }
+  .footer-col a:hover { color: var(--amber); }
+  .footer-bottom {
+    border-top: 1px solid var(--line-dark);
+    padding-top: 20px;
+    display: flex; justify-content: space-between; align-items: center;
+    font-size: 0.82rem;
+  }
+  .footer-bottom .built {
+    font-family: 'Caveat', cursive;
+    font-size: 1rem;
+    color: var(--bone-mute);
+  }
+
+  /* ========== STICKY MOBILE ACTION BAR (bottom) ========== */
+  .sticky-mobile-bar {
+    display: none;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 90;
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
+    background: rgba(7,16,11,0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid var(--line-dark);
+    gap: 10px;
+  }
+  .sticky-mobile-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 13px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .sticky-mobile-bar .sm-call {
+    background: rgba(239,232,218,0.1);
+    color: var(--cream);
+    border: 1px solid var(--line-dark);
+  }
+  .sticky-mobile-bar .sm-book {
+    background: var(--amber);
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(199,110,42,0.42);
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 1024px) {
+    .hero-inner { grid-template-columns: 1fr; gap: 36px; min-height: auto; padding-top: 16px; }
+    .event-picker { max-width: 480px; }
+    .origin-inner { grid-template-columns: 1fr; padding: 90px 28px; }
+    .genres-inner { grid-template-columns: 1fr; gap: 32px; }
+    .genre-cards { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; grid-template-areas: "country country" "rock pop" "sets sets"; }
+    .genre-card.featured { min-height: 260px; }
+    .band-grid { grid-template-columns: repeat(3, 1fr); }
+    .band-card.featured { grid-column: span 2; aspect-ratio: 1.05/1; }
+    .events-grid { grid-template-columns: 1fr 1fr; grid-template-areas: "wedding wedding" "brewery private" "vineyard vineyard"; }
+    .event-card.wedding { min-height: 360px; }
+    .originals-grid { grid-template-columns: 1fr; }
+    .faq-inner { grid-template-columns: 1fr; gap: 32px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
+
+  @media (max-width: 768px) {
+    nav.site-nav { padding: 0 18px; height: var(--nav-h-sm); }
+    nav.site-nav.scrolled { height: 60px; }
+    .nav-logo { height: 44px; }
+    .nav-links, .nav-right .btn, .nav-right .nav-phone { display: none; }
+    .mobile-actions { display: flex; }
+
+    .hero { padding: calc(var(--nav-h-sm) + 24px) 20px 80px; min-height: 100dvh; }
+    .hero-eyebrow { font-size: 1.25rem; }
+    .hero p.lede { font-size: 1.04rem; }
+    .hero-ctas .btn { padding: 14px 22px; font-size: 0.92rem; flex: 1; }
+    .event-picker { padding: 18px 16px; }
+    .event-picker-chips { gap: 8px; }
+    .event-chip { padding: 11px 10px; font-size: 1rem; }
+    .event-meta { font-size: 0.86rem; }
+
+    .trust-ribbon { margin: 24px 16px 0; padding: 18px 22px; gap: 14px; }
+    .trust-ribbon p { font-size: 1.18rem; }
+
+    .section-headline { font-size: 2.1rem; }
+
+    .origin-inner { padding: 64px 22px; }
+    .origin-text p { font-size: 1.02rem; }
+    .origin-quote { font-size: 1.3rem; }
+
+    .genre-cards { grid-template-columns: 1fr; grid-template-areas: "country" "rock" "pop" "sets"; }
+    .genre-card.featured h3 { font-size: 2rem; }
+    .genre-card { min-height: 160px; }
+
+    .band-grid { grid-template-columns: 1fr; gap: 14px; display: flex; overflow-x: auto; padding: 8px 4px 16px; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .band-grid::-webkit-scrollbar { display: none; }
+    .band-card { flex: 0 0 78%; min-width: 0; aspect-ratio: 3/4; scroll-snap-align: center; }
+    .band-card.featured { flex: 0 0 86%; aspect-ratio: 1/1; }
+
+    .events-grid { grid-template-columns: 1fr; grid-template-areas: "wedding" "brewery" "private" "vineyard"; gap: 14px; }
+    .event-card { min-height: 220px; padding: 22px 20px; }
+    .event-card.wedding { min-height: 320px; }
+    .event-card.wedding h3 { font-size: 2rem; }
+    .event-card.vineyard { flex-direction: column; align-items: flex-start; }
+
+    .original-card { grid-template-columns: 100px 1fr; gap: 16px; padding: 20px; }
+    .original-art { width: 100px; height: 100px; padding: 10px; }
+    .original-art h3 { font-size: 1.05rem; }
+    .original-meta h3 { font-size: 1.5rem; }
+
+    .marquee-wrap { padding: 56px 0 64px; }
+    .marquee-track span { padding: 0 24px; }
+    .marquee-track span::after { margin-left: 24px; }
+
+    .faq-cta-row .btn { flex: 1; min-width: 140px; }
+
+    .form-row { grid-template-columns: 1fr; }
+
+    footer { padding: 48px 20px 20px; }
+    .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+
+    .sticky-mobile-bar { display: flex; }
+    body { padding-bottom: 76px; }
+  }
+
+  @media (max-width: 420px) {
+    .hero h1 { font-size: 2.4rem; }
+    .event-picker-chips { grid-template-columns: 1fr 1fr; }
+    .anthems { gap: 8px; }
+    .anthem-tag { font-size: 0.75rem; padding: 6px 11px; }
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    .marquee-track { animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Jake on the Lake — home">
+      <img src="assets/logo.png" alt="Jake on the Lake logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#origin">Story</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#band">The Band</a></li>
+      <li><a href="#music">Originals</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="tel:+13059657311" class="nav-phone"><i class="fa-solid fa-phone-volume"></i> 305-965-7311</a>
+      <a href="#contact" class="btn btn-sm"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+    </div>
+    <div class="mobile-actions">
+      <a href="tel:+13059657311" class="mobile-call" aria-label="Call Jake on the Lake"><i class="fa-solid fa-phone-volume"></i></a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navDrawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="nav-overlay" id="navOverlay"></div>
+<aside class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <div class="drawer-header">
+    <img src="assets/logo.png" alt="Jake on the Lake">
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <nav class="drawer-links" aria-label="Mobile navigation">
+    <a href="#origin">Our Story</a>
+    <a href="#events">Events We Play</a>
+    <a href="#band">Meet the Band</a>
+    <a href="#music">Original Music</a>
+    <a href="#venues">Where We've Played</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="drawer-footer">
+    <a href="tel:+13059657311" class="drawer-phone"><i class="fa-solid fa-phone-volume"></i> 305-965-7311</a>
+    <a href="#contact" class="btn drawer-cta"><i class="fa-solid fa-calendar-check"></i> Book the Band</a>
+  </div>
+</aside>
+
+<!-- ========== HERO ========== -->
+<header class="hero" id="top">
+  <div class="hero-bg active" id="heroBg" style="background-image: url('https://static.wixstatic.com/media/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg/v1/fill/w_1800,h_1200,al_c,q_85/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg');"></div>
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Pembroke Pines, FL · est. 2020</div>
+      <h1>
+        <span class="stack">From a Pier on the Lake</span>
+        <span class="stack">to Your <span class="accent">Wedding Dance Floor</span>.</span>
+      </h1>
+      <p class="lede" id="heroLede">South Florida's country-rock live band — five vocalists, two singles, a 200-deep song catalog. We play weddings, breweries, private parties &amp; corporate events from Miami to the Blue Ridge.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn" id="heroPrimaryCta"><i class="fa-solid fa-calendar-check"></i> Check Our Availability</a>
+        <a href="#music" class="btn btn-ghost"><i class="fa-solid fa-music"></i> Hear Us</a>
+      </div>
+    </div>
+    <div class="event-picker" role="group" aria-label="Pick your event type">
+      <div class="event-picker-label">Pick your event &mdash;</div>
+      <div class="event-picker-chips">
+        <button class="event-chip active" data-evt="wedding"><i class="fa-solid fa-champagne-glasses"></i> Wedding</button>
+        <button class="event-chip" data-evt="brewery"><i class="fa-solid fa-beer-mug-empty"></i> Brewery / Bar</button>
+        <button class="event-chip" data-evt="private"><i class="fa-solid fa-users-line"></i> Private / Corp.</button>
+        <button class="event-chip" data-evt="vineyard"><i class="fa-solid fa-wine-glass"></i> Vineyard / Fest.</button>
+      </div>
+      <div class="event-meta" id="eventMeta">
+        <strong>Wedding lineup &mdash; ceremony, cocktail &amp; reception.</strong>
+        Acoustic ceremony set, full band reception, harmonies for your first dance. Custom song requests included.
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Trust ribbon (single sentence, NOT big-num/small-label) -->
+<div class="container" style="position:relative; max-width: 1240px;">
+  <div class="trust-ribbon" role="note">
+    <i class="fa-solid fa-water"></i>
+    <p>From <strong>200&#43; neighbors on boats</strong> at our first lakeside set to wedding receptions across South Florida &amp; the Blue Ridge &mdash; we've built a working catalog of <strong>200&#43; songs</strong> across country, rock &amp; pop.</p>
+  </div>
+</div>
+
+<!-- ========== ORIGIN STORY ========== -->
+<section class="origin" id="origin" style="padding:0;">
+  <div class="origin-bg" aria-hidden="true"></div>
+  <div class="origin-inner">
+    <div class="origin-text">
+      <div class="section-eyebrow">How Jake on the Lake started</div>
+      <h2 class="section-headline">Born on a Pier. Built for Weddings.</h2>
+      <p>It started in 2020 with two acoustic guitars, a tambourine, and the end of a wooden pier. Jake and his dad &mdash; <strong>The Other Guy</strong> &mdash; played covers from their lakeside dock in Pembroke Pines. By the third week, neighbors were paddling kayaks over. By the second month, more than <strong>200 people</strong> were anchoring boats off the seawall every Saturday.</p>
+      <p>Five years later, the lineup has grown to a <strong>five-vocalist Americana ensemble</strong> with two original singles on Spotify, Apple Music &amp; Amazon &mdash; and a working repertoire of <strong>country, rock &amp; pop</strong> tuned for everything from a brewery courtyard to a vineyard wedding in the Blue Ridge.</p>
+      <p class="origin-quote">
+        "We never planned a band. We planned a Saturday on the water. The band came to us."
+        <span>&mdash; Jake Valdes, founder &amp; lead</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== WHAT WE PLAY (genres) ========== -->
+<section id="repertoire" class="cream-warm">
+  <div class="genres-inner">
+    <div class="genres-intro">
+      <div class="section-eyebrow">200&#43; song catalog</div>
+      <h2 class="section-headline">What We Play.</h2>
+      <p>Country-rock is home base &mdash; that's how Jake plays it on the dock and how we built our two originals, "Nights in Nashville" and "Sucks to Be So Miserable." For weddings &amp; corporate events, we lean into the rock and pop sides of the catalog so every guest hears something they know.</p>
+      <div class="genre-tabs" role="tablist" aria-label="Pick a genre to see representative artists">
+        <button class="genre-tab active" data-genre="country">Country</button>
+        <button class="genre-tab" data-genre="rock">Rock</button>
+        <button class="genre-tab" data-genre="pop">Pop</button>
+      </div>
+    </div>
+    <div class="genre-cards">
+      <div class="genre-card featured country">
+        <div>
+          <div class="badge">our home base &mdash;</div>
+          <h3>Country &amp; Country-Rock</h3>
+          <p class="desc">From Zac Brown harmonies to modern country radio. Our two originals live here. Acoustic for ceremonies, full band for receptions.</p>
+        </div>
+        <p class="artists" id="artistsLine">Zac Brown Band · Eric Church · Morgan Wallen · Tyler Childers · Old Dominion · Luke Combs · Jason Aldean · Chris Stapleton</p>
+      </div>
+      <div class="genre-card rock">
+        <div>
+          <div class="badge">crowd-movers &mdash;</div>
+          <h3>Rock</h3>
+          <p class="desc">Tom Petty, Eagles, classic-rock staples &amp; modern indie.</p>
+        </div>
+      </div>
+      <div class="genre-card pop">
+        <div>
+          <div class="badge">for the dance floor &mdash;</div>
+          <h3>Pop</h3>
+          <p class="desc">Top-40 covers reimagined acoustic or full-band.</p>
+        </div>
+      </div>
+      <div class="genre-card sets">
+        <div>
+          <div class="badge">how we set lists &mdash;</div>
+          <p class="desc">Every event gets a custom set list built around your vibe and your must-plays. The bigger the lineup, the deeper the harmonies.</p>
+        </div>
+        <strong>200+</strong>
+        <p class="desc" style="margin-top:0; font-size:0.85rem;">songs in active rotation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE BAND ========== -->
+<section id="band">
+  <div class="container" style="text-align:center; max-width:760px; margin: 0 auto 12px;">
+    <div class="section-eyebrow">Five vocalists, two guitars, infinite harmonies</div>
+    <h2 class="section-headline">Meet the Lineup.</h2>
+    <p style="opacity:0.78; max-width:540px; margin:0 auto;">A core duo plus a deep bench of vocalists &amp; instrumentalists. Pick the size that fits your event &mdash; from a quiet acoustic two-piece to a full five-voice band.</p>
+  </div>
+  <div class="band-grid">
+    <div class="band-card featured">
+      <img src="https://static.wixstatic.com/media/bddd6a_9f9e0fecfaee49dbb9e32b516ed8e1d5~mv2.jpg/v1/fill/w_1200,h_1200,al_c,q_85/bddd6a_9f9e0fecfaee49dbb9e32b516ed8e1d5~mv2.jpg" alt="Jake Valdes, lead guitar &amp; vocals" loading="eager">
+      <div class="meta">
+        <div class="role">Founder · Lead vocals · Guitar · Harmonica</div>
+        <h3>Jake Valdes</h3>
+      </div>
+    </div>
+    <div class="band-card">
+      <img src="https://static.wixstatic.com/media/bddd6a_def9de9ef620406c8eef4be417e70601~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85/bddd6a_def9de9ef620406c8eef4be417e70601~mv2.jpg" alt="Danny Valdes (The Other Guy), vocals" loading="lazy">
+      <div class="meta">
+        <div class="role">Vocals · Tambourine</div>
+        <h3>The Other Guy</h3>
+      </div>
+    </div>
+    <div class="band-card">
+      <img src="https://static.wixstatic.com/media/bddd6a_ad04f3b1e2234fd8851bf377387a811d~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85/bddd6a_ad04f3b1e2234fd8851bf377387a811d~mv2.jpg" alt="Kathy Rodriguez, vocals" loading="lazy">
+      <div class="meta">
+        <div class="role">Vocals · Tambourine</div>
+        <h3>Kathy Rodriguez</h3>
+      </div>
+    </div>
+    <div class="band-card">
+      <img src="https://static.wixstatic.com/media/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg" alt="Adam Bolaños, vocals" loading="lazy">
+      <div class="meta">
+        <div class="role">Vocals</div>
+        <h3>Adam Bolaños</h3>
+      </div>
+    </div>
+    <div class="band-card">
+      <img src="https://static.wixstatic.com/media/bddd6a_d2778874f5d2467cb8307e4b7afd00ea~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85/bddd6a_d2778874f5d2467cb8307e4b7afd00ea~mv2.jpg" alt="Mya Johns, vocals" loading="lazy">
+      <div class="meta">
+        <div class="role">Vocals</div>
+        <h3>Mya Johns</h3>
+      </div>
+    </div>
+    <div class="band-card">
+      <img src="https://static.wixstatic.com/media/bddd6a_3e51997078e34b7282ba5d1a3cc41618~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85/bddd6a_3e51997078e34b7282ba5d1a3cc41618~mv2.jpg" alt="Jessica Brownlee, vocals" loading="lazy">
+      <div class="meta">
+        <div class="role">Vocals</div>
+        <h3>Jessica Brownlee</h3>
+      </div>
+    </div>
+    <div class="band-card">
+      <img src="https://static.wixstatic.com/media/bddd6a_4b6fa3af141548b699cf3bc0f81f4a3e~mv2.jpg/v1/fill/w_700,h_900,al_c,q_85/bddd6a_4b6fa3af141548b699cf3bc0f81f4a3e~mv2.jpg" alt="Olivia Tisone, ukulele &amp; vocals" loading="lazy">
+      <div class="meta">
+        <div class="role">Ukulele · Vocals</div>
+        <h3>Olivia Tisone</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== EVENTS WE DO ========== -->
+<section id="events" class="dark">
+  <div class="events-inner">
+    <div style="max-width:760px; margin:0 auto 8px; text-align:center;">
+      <div class="section-eyebrow">Where we fit in</div>
+      <h2 class="section-headline">Events We Play.</h2>
+    </div>
+    <div class="events-grid">
+      <article class="event-card wedding">
+        <div class="event-card-bg" style="background-image:url('https://static.wixstatic.com/media/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg/v1/fill/w_1400,h_1000,al_c,q_85/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg');"></div>
+        <div class="badge">our biggest stage &mdash;</div>
+        <h3>Weddings</h3>
+        <p>Acoustic ceremony, cocktail trio, full-band reception &mdash; we cover all three with the same musicians. Your first-dance song, your father-daughter pick, your last-call sing-along: all live, all custom.</p>
+        <a href="#contact" class="micro-cta" data-event-link="wedding">Plan a wedding set <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="event-card brewery">
+        <div class="event-card-bg" style="background-image:url('https://static.wixstatic.com/media/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg/v1/fill/w_900,h_700,al_c,q_85/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg');"></div>
+        <div class="badge">tap-room nights &mdash;</div>
+        <h3>Breweries &amp; Bars</h3>
+        <p>3-hour high-energy sets. Already a regular at Islamorada Brewery, Rock &amp; Brews and Con Murphy's.</p>
+        <a href="#contact" class="micro-cta" data-event-link="brewery">Book the bar set <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="event-card private">
+        <div class="event-card-bg" style="background-image:url('https://static.wixstatic.com/media/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg/v1/fill/w_900,h_700,al_c,q_85/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg');"></div>
+        <div class="badge">birthdays · holidays · launches &mdash;</div>
+        <h3>Private &amp; Corporate</h3>
+        <p>Backyards, ballrooms, boats. Scaled to room: from acoustic duo to full band.</p>
+        <a href="#contact" class="micro-cta" data-event-link="private">Plan the night <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="event-card vineyard">
+        <div class="event-card-bg" style="background-image:url('https://static.wixstatic.com/media/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg/v1/fill/w_1400,h_1000,al_c,q_85/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg');"></div>
+        <div class="vineyard-text">
+          <div class="badge">we travel &mdash;</div>
+          <h3>Vineyards &amp; Festivals</h3>
+          <p>Florida Keys, Naples, Fort Myers, Orlando, and the Blue Ridge Mountains of Georgia. We've already been to Buckley Vineyards.</p>
+        </div>
+        <a href="#contact" class="micro-cta" data-event-link="vineyard">Bring us out <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ORIGINALS ========== -->
+<section id="music">
+  <div class="container" style="text-align:center; max-width:760px; margin: 0 auto 12px;">
+    <div class="section-eyebrow">Yes &mdash; we have originals.</div>
+    <h2 class="section-headline">Our Released Music.</h2>
+    <p style="opacity:0.78;">Two singles dropped in 2025. Both written from the road &mdash; one from a Nashville run, one from the dock that started it all.</p>
+  </div>
+  <div class="originals-grid">
+    <article class="original-card">
+      <div class="original-art original-art-1" aria-hidden="true">
+        <span class="small">2025 single &mdash;</span>
+        <h3>Nights in Nashville</h3>
+      </div>
+      <div class="original-meta">
+        <div class="release">Released 2025 &middot; Single</div>
+        <h3>Nights in Nashville</h3>
+        <p>Our debut single, written straight from our own adventures in Music City. Nights filled with laughter, memories, and the kind of moments you never want to forget.</p>
+        <div class="stream-row">
+          <a class="stream-link" href="https://open.spotify.com/artist/2ySN3smBELLgMGxm7cnOwL" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i> Spotify</a>
+          <a class="stream-link" href="https://music.apple.com/us/artist/jake-on-the-lake/1821305337" target="_blank" rel="noopener"><i class="fa-brands fa-apple"></i> Apple Music</a>
+          <a class="stream-link" href="https://music.amazon.com/artists/B0FDJM32Q3/jake-on-the-lake" target="_blank" rel="noopener"><i class="fa-brands fa-amazon"></i> Amazon</a>
+          <a class="stream-link" href="https://jakeonthelake.hearnow.com/" target="_blank" rel="noopener"><i class="fa-solid fa-music"></i> All Platforms</a>
+        </div>
+      </div>
+    </article>
+    <article class="original-card">
+      <div class="original-art original-art-2" aria-hidden="true">
+        <span class="small">2025 single &mdash;</span>
+        <h3>Sucks to Be So Miserable</h3>
+      </div>
+      <div class="original-meta">
+        <div class="release">Released 2025 &middot; Single</div>
+        <h3>Sucks to Be So Miserable</h3>
+        <p>A country-rock track born during the lockdown era when the band formed &mdash; written for the neighbor who kept calling the cops on our jam sessions on the dock. Some people just thrive on being negative.</p>
+        <div class="stream-row">
+          <a class="stream-link" href="https://open.spotify.com/artist/2ySN3smBELLgMGxm7cnOwL" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i> Spotify</a>
+          <a class="stream-link" href="https://music.apple.com/us/artist/jake-on-the-lake/1821305337" target="_blank" rel="noopener"><i class="fa-brands fa-apple"></i> Apple Music</a>
+          <a class="stream-link" href="https://music.amazon.com/artists/B0FDJM32Q3/jake-on-the-lake" target="_blank" rel="noopener"><i class="fa-brands fa-amazon"></i> Amazon</a>
+          <a class="stream-link" href="https://jakeonthelake.hearnow.com/" target="_blank" rel="noopener"><i class="fa-solid fa-music"></i> All Platforms</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ========== WHERE WE'VE PLAYED (marquee) ========== -->
+<section id="venues" class="marquee-wrap" style="padding:0;">
+  <div class="marquee-head" style="text-align:center;">
+    <div class="section-eyebrow">A few stages we've stood on</div>
+    <h2 class="section-headline" style="color:var(--bone);">Where We've Played.</h2>
+  </div>
+  <div class="marquee-track" id="marqueeTrack" aria-label="Venue list">
+    <span>Margaritaville</span>
+    <span>Rock &amp; Brews</span>
+    <span>Islamorada Brewery</span>
+    <span>Dania Pointe</span>
+    <span>Plantation Walk</span>
+    <span>Con Murphy's</span>
+    <span>Buckley Vineyards</span>
+    <!-- duplicated for seamless loop -->
+    <span>Margaritaville</span>
+    <span>Rock &amp; Brews</span>
+    <span>Islamorada Brewery</span>
+    <span>Dania Pointe</span>
+    <span>Plantation Walk</span>
+    <span>Con Murphy's</span>
+    <span>Buckley Vineyards</span>
+  </div>
+  <div class="anthems">
+    <div class="anthems-label">National Anthem performances &mdash;</div>
+    <span class="anthem-tag"><i class="fa-solid fa-fire"></i>Miami Heat</span>
+    <span class="anthem-tag"><i class="fa-solid fa-baseball"></i>Miami Marlins</span>
+    <span class="anthem-tag"><i class="fa-solid fa-basketball"></i>Miami Hurricanes</span>
+    <span class="anthem-tag"><i class="fa-solid fa-basketball"></i>FAU Owls</span>
+    <span class="anthem-tag"><i class="fa-solid fa-trophy"></i>NSU Sweet 16</span>
+    <span class="anthem-tag"><i class="fa-solid fa-radio"></i>99.9 Kiss Country</span>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section id="faq" class="cream-warm">
+  <div class="faq-inner">
+    <div class="faq-intro">
+      <div class="section-eyebrow">Booking questions</div>
+      <h2 class="section-headline">Before You Book.</h2>
+      <p>Most couples and event planners ask the same first eight questions. We answered them straight up &mdash; if yours isn't here, just text Jake at <a href="tel:+13059657311" style="color:var(--saddle); font-weight:700;">305-965-7311</a>.</p>
+      <div class="faq-cta-row">
+        <a href="#contact" class="btn"><i class="fa-solid fa-calendar-check"></i> Check Date</a>
+        <a href="tel:+13059657311" class="btn btn-ghost-cream"><i class="fa-solid fa-phone-volume"></i> Call Jake</a>
+      </div>
+    </div>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>What sized lineup do we book for our event?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">It depends on your room and your budget. The acoustic duo (Jake + The Other Guy) fits intimate ceremonies, cocktail hours, and small private parties. Three or four-piece works for most weddings and brewery shows. The full five-vocalist band is built for receptions, festivals, and corporate galas.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>How far do you travel?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Anywhere in South Florida is included &mdash; Miami, Fort Lauderdale, Pembroke Pines, the Florida Keys. We also regularly play Naples, Fort Myers, Orlando, and the Blue Ridge Mountains in Georgia. Travel beyond is quoted per event.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>What does it cost to book Jake on the Lake?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Pricing depends on lineup size, set length, travel, and date. Weddings start at our 4-hour reception package. Tap-room sets are priced as a flat 2- or 3-hour rate. Send us your event details on the contact form and you'll have a quote within 24 hours.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>Do you bring your own sound system?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Yes. We provide a full PA, vocal microphones, monitors, and stage lighting suitable for crowds up to about 300. For bigger venues or outdoor festival stages, we can scale up &mdash; just tell us the room.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>Can we request specific songs?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Always. Every event gets a custom set list built around your must-plays and do-not-plays. If a song is on streaming and works for live band, we'll learn it. Weddings get a complete first-dance, parents-dance and last-song workup.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>How long are your sets?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Standard tap-room shows are 2 or 3 hours with one break. Wedding receptions are 4-5 hours with breaks for toasts, dinner service, and cake. Festival sets are usually 60-90 minutes &mdash; high-energy, no breaks.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>Do you need a deposit to hold our date?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Yes &mdash; a 25% deposit holds the date once your contract is signed. Final balance is due the week of the event. Full refund window if the date moves more than 60 days out.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>What's your weather plan for outdoor events?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">South Florida weather is part of every contract. We require either a covered stage or a tent rated for our equipment, plus a confirmed indoor backup. We won't play live electronics in active rain &mdash; safety call &mdash; but we will play through wind and threatening skies.</div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false"><span>Can you also play during ceremony AND reception?</span><i class="fa-solid fa-chevron-down"></i></button>
+        <div class="accordion-content"><div class="accordion-text">Yes. Our most popular wedding package is "all-day" &mdash; acoustic duo for the ceremony processional and recessional, trio for cocktail hour, and the full lineup for reception and dancing. One band, three different vibes, no DJ swap.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-eyebrow">Tell us about your event &mdash;</div>
+      <h2 class="section-headline">Check Our Date.</h2>
+      <p style="color:var(--bone-mute); margin-bottom:28px; max-width:520px;">Send the basics and we'll come back within 24 hours with availability and a price. Need it faster? Text Jake at 305-965-7311.</p>
+      <form class="contact-form" id="contactForm" name="booking" method="POST" data-netlify="true" onsubmit="submitForm(event)">
+        <input type="hidden" name="form-name" value="booking">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Your Name</label>
+            <input id="cf-name" type="text" name="name" required placeholder="First and last">
+          </div>
+          <div class="form-group">
+            <label for="cf-event">Event Type</label>
+            <select id="cf-event" name="event_type" required>
+              <option value="">Choose one</option>
+              <option value="wedding">Wedding</option>
+              <option value="brewery">Brewery / Bar Show</option>
+              <option value="private">Private / Birthday</option>
+              <option value="corporate">Corporate</option>
+              <option value="vineyard">Vineyard / Festival</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" type="email" name="email" required placeholder="you@email.com">
+          </div>
+          <div class="form-group">
+            <label for="cf-date">Event Date</label>
+            <input id="cf-date" type="date" name="event_date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-msg">Tell us about the event</label>
+          <textarea id="cf-msg" name="message" placeholder="Venue or city, headcount, ceremony / cocktail / reception, any must-play songs..."></textarea>
+        </div>
+        <button type="submit" class="btn"><i class="fa-solid fa-paper-plane"></i> Send Inquiry</button>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="contact-info">
+      <div class="info-block">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div>
+          <h3>Text or Call</h3>
+          <a href="tel:+13059657311">305-965-7311</a>
+          <p>Jake usually replies within a few hours.</p>
+        </div>
+      </div>
+      <div class="info-block">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <div>
+          <h3>Email</h3>
+          <a href="mailto:officialjakeonthelake@gmail.com">officialjakeonthelake@gmail.com</a>
+        </div>
+      </div>
+      <div class="info-block">
+        <i class="fa-solid fa-location-crosshairs"></i>
+        <div>
+          <h3>Based In</h3>
+          <address>Pembroke Pines, FL<br>Serving Miami &middot; Fort Lauderdale &middot; the Keys &middot; Orlando &middot; the Blue Ridge</address>
+        </div>
+      </div>
+      <div class="info-block">
+        <i class="fa-solid fa-share-nodes"></i>
+        <div>
+          <h3>Follow Along</h3>
+          <div class="social-row">
+            <a href="https://www.instagram.com/officialjakeonthelake/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/JOTL.Music/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/channel/UCOoNC4t_Q2ey4vYwwHYdQ-A" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@officialjakeonthelake" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://open.spotify.com/artist/2ySN3smBELLgMGxm7cnOwL" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+            <a href="https://music.apple.com/us/artist/jake-on-the-lake/1821305337" target="_blank" rel="noopener" aria-label="Apple Music"><i class="fa-brands fa-apple"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="map-block">
+        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448594.4!2d-80.55!3d26.05!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d901e89d5cc003%3A0xd1015be36a52d28c!2sPembroke%20Pines%2C%20FL!5e0!3m2!1sen!2sus!4v1714862400000" title="Pembroke Pines, FL"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo.png" alt="Jake on the Lake">
+      <p>South Florida's country-rock live band. Pembroke Pines roots, weddings &amp; breweries from Miami to the Blue Ridge.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/officialjakeonthelake/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.facebook.com/JOTL.Music/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/channel/UCOoNC4t_Q2ey4vYwwHYdQ-A" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@officialjakeonthelake" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>The Band</h4>
+      <ul>
+        <li><a href="#origin">Our Story</a></li>
+        <li><a href="#band">Lineup</a></li>
+        <li><a href="#repertoire">What We Play</a></li>
+        <li><a href="#venues">Where We've Played</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Events</h4>
+      <ul>
+        <li><a href="#events">Weddings</a></li>
+        <li><a href="#events">Breweries &amp; Bars</a></li>
+        <li><a href="#events">Private &amp; Corporate</a></li>
+        <li><a href="#events">Vineyards &amp; Festivals</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Listen</h4>
+      <ul>
+        <li><a href="https://open.spotify.com/artist/2ySN3smBELLgMGxm7cnOwL" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a href="https://music.apple.com/us/artist/jake-on-the-lake/1821305337" target="_blank" rel="noopener">Apple Music</a></li>
+        <li><a href="https://music.amazon.com/artists/B0FDJM32Q3/jake-on-the-lake" target="_blank" rel="noopener">Amazon Music</a></li>
+        <li><a href="https://www.youtube.com/channel/UCOoNC4t_Q2ey4vYwwHYdQ-A" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <div>&copy; 2026 Jake on the Lake Entertainment, Inc. &middot; Pembroke Pines, FL</div>
+    <div class="built">recorded live, mixed at the dock</div>
+  </div>
+</footer>
+
+<!-- Sticky mobile bar -->
+<div class="sticky-mobile-bar" id="stickyBar">
+  <a href="tel:+13059657311" class="sm-call"><i class="fa-solid fa-phone-volume"></i> Call Jake</a>
+  <a href="#contact" class="sm-book"><i class="fa-solid fa-calendar-check"></i> Book the Band</a>
+</div>
+
+<!-- ========== JSON-LD: MusicGroup + LocalBusiness combo ========== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Jake on the Lake",
+  "alternateName": "JOTL",
+  "url": "https://www.jotlmusic.com/",
+  "image": "https://crossfiber.github.io/jotl-music/assets/hero-group.jpg",
+  "logo": "https://crossfiber.github.io/jotl-music/assets/logo.png",
+  "description": "South Florida country-rock live music duo and band based in Pembroke Pines, FL. Weddings, breweries, private parties, and corporate events from Miami to the Blue Ridge Mountains.",
+  "genre": ["Country", "Rock", "Country Rock", "Pop", "Americana"],
+  "foundingDate": "2020",
+  "foundingLocation": { "@type": "Place", "name": "Pembroke Pines, FL" },
+  "email": "officialjakeonthelake@gmail.com",
+  "telephone": "+1-305-965-7311",
+  "member": [
+    {"@type": "Person", "name": "Jake Valdes", "roleName": "Founder, Lead Vocals, Guitar, Harmonica"},
+    {"@type": "Person", "name": "Danny Valdes", "alternateName": "The Other Guy", "roleName": "Vocals, Tambourine"},
+    {"@type": "Person", "name": "Kathy Rodriguez", "roleName": "Vocals, Tambourine"},
+    {"@type": "Person", "name": "Adam Bolaños", "roleName": "Vocals"},
+    {"@type": "Person", "name": "Mya Johns", "roleName": "Vocals"},
+    {"@type": "Person", "name": "Jessica Brownlee", "roleName": "Vocals"},
+    {"@type": "Person", "name": "Olivia Tisone", "roleName": "Ukulele, Vocals"}
+  ],
+  "album": [
+    {"@type": "MusicRelease", "name": "Nights in Nashville", "datePublished": "2025"},
+    {"@type": "MusicRelease", "name": "Sucks to Be So Miserable", "datePublished": "2025"}
+  ],
+  "sameAs": [
+    "https://www.instagram.com/officialjakeonthelake/",
+    "https://www.facebook.com/JOTL.Music/",
+    "https://www.youtube.com/channel/UCOoNC4t_Q2ey4vYwwHYdQ-A",
+    "https://www.tiktok.com/@officialjakeonthelake",
+    "https://open.spotify.com/artist/2ySN3smBELLgMGxm7cnOwL",
+    "https://music.apple.com/us/artist/jake-on-the-lake/1821305337",
+    "https://music.amazon.com/artists/B0FDJM32Q3/jake-on-the-lake"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Jake on the Lake Entertainment, Inc.",
+  "image": "https://crossfiber.github.io/jotl-music/assets/hero-group.jpg",
+  "url": "https://crossfiber.github.io/jotl-music/",
+  "telephone": "+1-305-965-7311",
+  "email": "officialjakeonthelake@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pembroke Pines",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 26.0078, "longitude": -80.2962 },
+  "areaServed": [
+    "Pembroke Pines, FL", "Miami, FL", "Fort Lauderdale, FL", "Florida Keys", "Naples, FL",
+    "Fort Myers, FL", "Orlando, FL", "Blue Ridge Mountains, GA"
+  ],
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.instagram.com/officialjakeonthelake/",
+    "https://www.facebook.com/JOTL.Music/"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Live Music Booking",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wedding Live Music", "description": "Acoustic ceremony, cocktail trio, full-band reception."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brewery / Bar Live Set", "description": "2-3 hour high-energy live music sets for tap rooms and bars."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Private &amp; Corporate Events", "description": "Birthday parties, holiday parties, product launches, corporate galas."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Vineyard &amp; Festival Performance", "description": "Outdoor and travel-required live performance bookings."}}
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What sized lineup do we book for our event?","acceptedAnswer":{"@type":"Answer","text":"It depends on your room and your budget. The acoustic duo (Jake + The Other Guy) fits intimate ceremonies, cocktail hours, and small private parties. Three or four-piece works for most weddings and brewery shows. The full five-vocalist band is built for receptions, festivals, and corporate galas."}},
+    {"@type":"Question","name":"How far do you travel?","acceptedAnswer":{"@type":"Answer","text":"Anywhere in South Florida is included — Miami, Fort Lauderdale, Pembroke Pines, the Florida Keys. We also regularly play Naples, Fort Myers, Orlando, and the Blue Ridge Mountains in Georgia. Travel beyond is quoted per event."}},
+    {"@type":"Question","name":"What does it cost to book Jake on the Lake?","acceptedAnswer":{"@type":"Answer","text":"Pricing depends on lineup size, set length, travel, and date. Weddings start at our 4-hour reception package. Tap-room sets are priced as a flat 2- or 3-hour rate. Send us your event details on the contact form and you'll have a quote within 24 hours."}},
+    {"@type":"Question","name":"Do you bring your own sound system?","acceptedAnswer":{"@type":"Answer","text":"Yes. We provide a full PA, vocal microphones, monitors, and stage lighting suitable for crowds up to about 300. For bigger venues or outdoor festival stages, we can scale up — just tell us the room."}},
+    {"@type":"Question","name":"Can we request specific songs?","acceptedAnswer":{"@type":"Answer","text":"Always. Every event gets a custom set list built around your must-plays and do-not-plays. If a song is on streaming and works for live band, we'll learn it. Weddings get a complete first-dance, parents-dance and last-song workup."}},
+    {"@type":"Question","name":"How long are your sets?","acceptedAnswer":{"@type":"Answer","text":"Standard tap-room shows are 2 or 3 hours with one break. Wedding receptions are 4-5 hours with breaks for toasts, dinner service, and cake. Festival sets are usually 60-90 minutes — high-energy, no breaks."}},
+    {"@type":"Question","name":"Do you need a deposit to hold our date?","acceptedAnswer":{"@type":"Answer","text":"Yes — a 25% deposit holds the date once your contract is signed. Final balance is due the week of the event. Full refund window if the date moves more than 60 days out."}},
+    {"@type":"Question","name":"What's your weather plan for outdoor events?","acceptedAnswer":{"@type":"Answer","text":"South Florida weather is part of every contract. We require either a covered stage or a tent rated for our equipment, plus a confirmed indoor backup. We won't play live electronics in active rain — safety call — but we will play through wind and threatening skies."}},
+    {"@type":"Question","name":"Can you also play during ceremony AND reception?","acceptedAnswer":{"@type":"Answer","text":"Yes. Our most popular wedding package is \"all-day\" — acoustic duo for the ceremony processional and recessional, trio for cocktail hour, and the full lineup for reception and dancing. One band, three different vibes, no DJ swap."}}
+  ]
+}
+</script>
+
+<!-- ========== JS ========== -->
+<script>
+(function() {
+  // ===== Nav scroll state =====
+  const nav = document.getElementById('siteNav');
+  function onScroll() {
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // ===== Mobile drawer =====
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('navDrawer');
+  const overlay = document.getElementById('navOverlay');
+  const drawerClose = document.getElementById('drawerClose');
+  function openDrawer() {
+    drawer.classList.add('open');
+    overlay.classList.add('open');
+    document.body.classList.add('drawer-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    overlay.classList.remove('open');
+    document.body.classList.remove('drawer-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+  hamburger.addEventListener('click', openDrawer);
+  drawerClose.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer(); });
+
+  // ===== Hero event-type selector (signature element) =====
+  const EVENT_DATA = {
+    wedding: {
+      img: 'https://static.wixstatic.com/media/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg/v1/fill/w_1800,h_1200,al_c,q_85/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg',
+      meta: '<strong>Wedding lineup &mdash; ceremony, cocktail &amp; reception.</strong>Acoustic ceremony set, full band reception, harmonies for your first dance. Custom song requests included.',
+      lede: "South Florida's country-rock wedding band &mdash; acoustic ceremony, cocktail trio, full-band reception, all from one lineup. We've played from Pembroke Pines to the Blue Ridge.",
+      cta: '<i class="fa-solid fa-ring"></i> Plan Your Wedding'
+    },
+    brewery: {
+      img: 'https://static.wixstatic.com/media/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg/v1/fill/w_1800,h_1200,al_c,q_85/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg',
+      meta: '<strong>Tap-room set &mdash; 2-3 hours, one break.</strong>High-energy cover sets calibrated for your taproom regulars. Already booked at Islamorada Brewery, Rock &amp; Brews, Con Murphy\'s.',
+      lede: "South Florida country-rock cover band for breweries &amp; bars. Three-hour high-energy sets, our own PA &mdash; built for tap-room nights and boat-up shows.",
+      cta: '<i class="fa-solid fa-beer-mug-empty"></i> Book a Tap-Room Set'
+    },
+    private: {
+      img: 'https://static.wixstatic.com/media/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg/v1/fill/w_1800,h_1200,al_c,q_85/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg',
+      meta: '<strong>Private &amp; corporate &mdash; scaled to your room.</strong>Backyards, ballrooms, boats. Acoustic duo to full five-vocalist band. Custom request lists, dress code on point.',
+      lede: "Private parties, birthday celebrations, corporate galas, holiday events &mdash; South Florida country-rock band scaled from acoustic duo to five-vocalist lineup.",
+      cta: '<i class="fa-solid fa-users-line"></i> Plan a Private Event'
+    },
+    vineyard: {
+      img: 'https://static.wixstatic.com/media/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg/v1/fill/w_1800,h_1200,al_c,q_85/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg',
+      meta: '<strong>Vineyards &amp; festivals &mdash; we travel.</strong>Florida Keys, Naples, Orlando, the Blue Ridge of Georgia. Already booked at Buckley Vineyards. Outdoor stages, full sound.',
+      lede: "South Florida country-rock band for vineyards, festivals &amp; outdoor stages &mdash; from the Keys to Buckley Vineyards in the Blue Ridge of Georgia. Full sound, full lineup.",
+      cta: '<i class="fa-solid fa-wine-glass"></i> Bring Us Out'
+    }
+  };
+  const heroBg = document.getElementById('heroBg');
+  const eventMeta = document.getElementById('eventMeta');
+  const heroLede = document.getElementById('heroLede');
+  const heroCta = document.getElementById('heroPrimaryCta');
+  const chips = document.querySelectorAll('.event-chip');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const evt = chip.getAttribute('data-evt');
+      const data = EVENT_DATA[evt];
+      if (!data) return;
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      heroBg.style.backgroundImage = `url('${data.img}')`;
+      eventMeta.innerHTML = data.meta;
+      heroLede.textContent = data.lede;
+      heroCta.innerHTML = data.cta + ' <i class="fa-solid fa-arrow-right"></i>';
+      heroCta.setAttribute('data-event', evt);
+    });
+  });
+  // Match contact form event-type when arriving from event card CTA
+  document.querySelectorAll('[data-event-link]').forEach(link => {
+    link.addEventListener('click', e => {
+      const evt = link.getAttribute('data-event-link');
+      const sel = document.getElementById('cf-event');
+      if (sel) {
+        for (let i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === evt) { sel.selectedIndex = i; break; }
+        }
+      }
+    });
+  });
+
+  // ===== Genre tabs =====
+  const ARTISTS = {
+    country: 'Zac Brown Band · Eric Church · Morgan Wallen · Tyler Childers · Old Dominion · Luke Combs · Jason Aldean · Chris Stapleton',
+    rock: 'Tom Petty · Eagles · Fleetwood Mac · Mumford &amp; Sons · The Killers · Hozier · Black Crowes · Kings of Leon',
+    pop: 'Bruno Mars · Ed Sheeran · Adele · Maroon 5 · Taylor Swift · Justin Bieber · Olivia Rodrigo · Doja Cat'
+  };
+  const tabs = document.querySelectorAll('.genre-tab');
+  const artistsLine = document.getElementById('artistsLine');
+  tabs.forEach(t => {
+    t.addEventListener('click', () => {
+      tabs.forEach(x => x.classList.remove('active'));
+      t.classList.add('active');
+      const g = t.getAttribute('data-genre');
+      if (artistsLine && ARTISTS[g]) artistsLine.innerHTML = ARTISTS[g];
+    });
+  });
+
+  // ===== FAQ accordion =====
+  document.querySelectorAll('.accordion-header').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      // close all
+      document.querySelectorAll('.accordion-item').forEach(i => {
+        i.classList.remove('open');
+        const b = i.querySelector('.accordion-header');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ===== Form (mailto fallback — site is fully static; submissions open user's mail client) =====
+  window.submitForm = function(e) {
+    e.preventDefault();
+    const status = document.getElementById('formStatus');
+    const f = e.target;
+    const name = f.name.value.trim();
+    const email = f.email.value.trim();
+    const evt = f.event_type.value;
+    const date = f.event_date.value;
+    const msg = f.message.value.trim();
+    if (!name || !email || !evt) {
+      status.className = 'form-status show error';
+      status.textContent = 'Please fill out your name, email, and event type.';
+      return;
+    }
+    const subject = encodeURIComponent(`Booking inquiry — ${evt} — ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nEvent type: ${evt}\nEvent date: ${date || 'TBD'}\n\nDetails:\n${msg || '(none)'}`
+    );
+    window.location.href = `mailto:officialjakeonthelake@gmail.com?subject=${subject}&body=${body}`;
+    status.className = 'form-status show success';
+    status.innerHTML = "Thanks! Your email client just opened with your inquiry pre-filled. If nothing happened, text Jake at <a href='tel:+13059657311' style='color:var(--amber);'>305-965-7311</a>.";
+  };
+})();
+</script>
+
+</body>
+</html>
