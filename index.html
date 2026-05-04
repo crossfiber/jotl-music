@@ -1345,65 +1345,6 @@
     transition: all 0.2s ease;
   }
   .social-row a:hover { background: var(--amber); color: #fff; transform: translateY(-2px); }
-  /* Booking process card (replaces removed map) */
-  .booking-process {
-    background: rgba(239,232,218,0.04);
-    border: 1px solid var(--line-dark);
-    border-radius: 10px;
-    padding: 22px 22px 24px;
-    margin-top: 4px;
-  }
-  .booking-process .bp-eyebrow {
-    display: block;
-    font-family: 'Caveat', cursive;
-    color: var(--amber);
-    font-size: 1.25rem;
-    line-height: 1;
-    margin-bottom: 14px;
-  }
-  .booking-process .bp-headline {
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: var(--cream);
-    line-height: 1;
-    letter-spacing: 0.005em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-  }
-  .bp-steps {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    counter-reset: bp;
-  }
-  .bp-steps li {
-    display: grid;
-    grid-template-columns: 36px 1fr;
-    gap: 14px;
-    align-items: flex-start;
-    counter-increment: bp;
-  }
-  .bp-num {
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    background: var(--amber);
-    color: #fff;
-    display: inline-flex; align-items: center; justify-content: center;
-    font-family: 'Big Shoulders Display', sans-serif;
-    font-weight: 900;
-    font-size: 1.1rem;
-    line-height: 1;
-    flex-shrink: 0;
-  }
-  .bp-text {
-    font-size: 0.92rem;
-    line-height: 1.55;
-    color: var(--bone-mute);
-    padding-top: 5px;
-  }
-  .bp-text strong { color: var(--bone); font-weight: 700; }
 
   /* ========== FOOTER ========== */
   footer {
@@ -1527,13 +1468,6 @@
     .info-tile .lbl { font-size: 0.66rem; }
     .info-tile .val { font-size: 0.92rem; }
     .info-area { padding-top: 14px; margin-bottom: 14px; }
-    .booking-process { padding: 18px 18px 20px; }
-    .booking-process .bp-eyebrow { font-size: 1.1rem; margin-bottom: 10px; }
-    .booking-process .bp-headline { font-size: 1.2rem; margin-bottom: 12px; }
-    .bp-steps { gap: 12px; }
-    .bp-steps li { grid-template-columns: 30px 1fr; gap: 12px; }
-    .bp-num { width: 30px; height: 30px; font-size: 0.95rem; }
-    .bp-text { font-size: 0.88rem; padding-top: 3px; }
     .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   }
 
@@ -2363,24 +2297,6 @@
           <a href="https://open.spotify.com/artist/2ySN3smBELLgMGxm7cnOwL" target="_blank" rel="noopener" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
           <a href="https://music.apple.com/us/artist/jake-on-the-lake/1821305337" target="_blank" rel="noopener" aria-label="Apple Music"><i class="fa-brands fa-apple"></i></a>
         </div>
-      </div>
-      <div class="booking-process" aria-label="Booking process">
-        <span class="bp-eyebrow">After you tap Send Inquiry</span>
-        <h3 class="bp-headline">Here's What Happens Next.</h3>
-        <ol class="bp-steps">
-          <li>
-            <span class="bp-num">1</span>
-            <span class="bp-text"><strong>We reply within 24 hours</strong> with availability for your date plus a transparent quote based on lineup, set length, and travel.</span>
-          </li>
-          <li>
-            <span class="bp-num">2</span>
-            <span class="bp-text"><strong>Quick 15-minute call with Jake</strong> to walk through the room, must-play songs, and any custom requests for the set list.</span>
-          </li>
-          <li>
-            <span class="bp-num">3</span>
-            <span class="bp-text"><strong>25% deposit holds the date.</strong> Final balance the week of the event. Full refund window if the date moves more than 60 days out.</span>
-          </li>
-        </ol>
       </div>
     </div>
   </div>
