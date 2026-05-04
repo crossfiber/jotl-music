@@ -1431,7 +1431,16 @@
     .origin-text .section-eyebrow { text-align: left; }
     .origin-text p { font-size: 0.98rem; line-height: 1.6; }
     .origin-quote { text-align: left; padding-left: 18px; padding-top: 0; padding-right: 0; border-top: none; border-left: 3px solid var(--amber); margin: 24px 0 0; }
-    .origin-stats { gap: 14px; margin: 24px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line-dark); border-bottom: none; }
+    .origin-stats {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      margin: 20px 0 0;
+      padding: 16px 0 0;
+      border-top: 1px solid var(--line-dark);
+      border-bottom: none;
+    }
+    .origin-stat strong { font-size: 1.45rem; margin-bottom: 4px; }
+    .origin-stat .lbl { font-size: 0.66rem; line-height: 1.3; letter-spacing: 0.02em; }
     .genre-cards { grid-template-columns: 1fr; gap: 16px; }
     .genre-card { min-height: 280px; }
     .catalog-stat { padding: 22px 24px; }
@@ -1444,7 +1453,27 @@
     .event-card h3 { font-size: 1.55rem; }
     .originals-grid { grid-template-columns: 1fr; }
     .faq-inner { grid-template-columns: 1fr; gap: 32px; }
-    .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+    /* Contact section condensed for mobile */
+    .contact-inner { grid-template-columns: 1fr; gap: 22px; }
+    .contact-card { padding: 26px 22px; border-radius: 10px; }
+    .contact-card .section-eyebrow { font-size: 1.15rem; margin-bottom: 4px; }
+    .contact-card .section-headline { font-size: 1.85rem; margin-bottom: 10px; }
+    .contact-card .lede { font-size: 0.95rem; line-height: 1.5; margin-bottom: 18px; }
+    .contact-form { gap: 12px; }
+    .form-row { gap: 12px; }
+    .form-group label { font-size: 0.78rem; margin-bottom: 4px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { padding: 11px 12px; font-size: 0.96rem; }
+    .form-group textarea { min-height: 86px; }
+    .contact-form button { padding: 13px 22px; }
+    .contact-info-grid { gap: 10px; margin-bottom: 16px; }
+    .info-tile { padding: 14px 14px; }
+    .info-tile .ico { font-size: 1.1rem; }
+    .info-tile .lbl { font-size: 0.66rem; }
+    .info-tile .val { font-size: 0.92rem; }
+    .info-area { padding-top: 14px; margin-bottom: 14px; }
+    .map-block { aspect-ratio: 4/3; }
     .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
   }
 
@@ -1459,8 +1488,17 @@
     .hero-eyebrow { font-size: 1.25rem; }
     .hero p.lede { font-size: 1.04rem; }
     .hero-ctas .btn { padding: 14px 22px; font-size: 0.92rem; flex: 1; }
-    .hero-tags { gap: 8px; margin-top: 6px; }
-    .hero-tag { font-size: 0.78rem; padding: 6px 11px; }
+    .hero-tags {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    .hero-tag {
+      font-size: 0.78rem;
+      padding: 9px 12px;
+      justify-content: flex-start;
+    }
     .event-meta { font-size: 0.86rem; }
 
     .origin-stats { grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -1619,12 +1657,16 @@
     .stream-link { justify-content: center; padding: 11px 12px; font-size: 0.86rem; }
     .original-meta h3 { font-size: 1.5rem; }
 
-    .venues-section { padding: 64px 0; }
-    .venues-head { padding: 0 20px; }
-    .marquee-rows { gap: 14px; }
-    .marquee-track .name { padding: 0 28px; }
-    .marquee-row.row-a .marquee-track { animation-duration: 42s; }
-    .marquee-row.row-b .marquee-track { animation-duration: 54s; }
+    .venues-section { padding: 56px 0; }
+    .venues-head { padding: 0 20px; margin-bottom: 32px; }
+    .marquee-rows { gap: 8px; }
+    .marquee-track .name {
+      font-size: clamp(1.7rem, 7vw, 2.4rem);
+      padding: 0 18px;
+    }
+    .marquee-track .sep { font-size: 0.95rem; }
+    .marquee-row.row-a .marquee-track { animation-duration: 22s; }
+    .marquee-row.row-b .marquee-track { animation-duration: 28s; }
     .anthems { padding: 28px 20px 0; }
 
     .faq-cta-row .btn { flex: 1; min-width: 140px; }
@@ -1632,15 +1674,28 @@
     .form-row { grid-template-columns: 1fr; }
 
     footer { padding: 48px 20px 20px; }
-    .footer-inner { grid-template-columns: 1fr; gap: 28px; }
-    .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+    /* Mobile footer: brand spans full width on top, link cols paired below */
+    footer { padding: 40px 20px 18px; }
+    .footer-inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 22px 20px;
+      margin-bottom: 24px;
+    }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-brand img { height: 48px; margin-bottom: 12px; }
+    .footer-brand p { font-size: 0.85rem; margin-bottom: 14px; max-width: 100%; }
+    .footer-col h4 { font-size: 0.78rem; margin-bottom: 10px; }
+    .footer-col ul { gap: 7px; }
+    .footer-col a { font-size: 0.86rem; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; padding-top: 14px; font-size: 0.76rem; }
+    .footer-bottom .built { font-size: 0.95rem; }
 
     /* Sticky mobile bar removed per user feedback */
   }
 
   @media (max-width: 420px) {
     .hero h1 { font-size: 2.4rem; }
-    .hero-tags { flex-direction: column; align-items: flex-start; }
+    .hero-tag { font-size: 0.74rem; padding: 8px 10px; }
     .anthems { gap: 8px; }
     .anthem-tag { font-size: 0.75rem; padding: 6px 11px; }
   }
@@ -2478,6 +2533,15 @@
       toggle.querySelector('.schedule-toggle-label').textContent = open
         ? 'Show Fewer Dates'
         : `View All ${total} Upcoming Shows`;
+      // When collapsing, scroll back to the schedule section so the user
+      // doesn't end up stranded down at the next section.
+      if (!open) {
+        const section = document.getElementById('schedule');
+        if (section) {
+          // Small delay so the collapse animation can settle before we scroll.
+          setTimeout(() => section.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+        }
+      }
     });
   })();
 
