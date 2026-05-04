@@ -360,15 +360,12 @@
   }
   .hero-content { max-width: 720px; }
   .hero-eyebrow {
-    display: inline-flex; align-items: center; gap: 12px;
+    display: inline-block;
     font-family: 'Caveat', cursive;
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--amber);
     margin-bottom: 8px;
-  }
-  .hero-eyebrow::before {
-    content: ''; display: inline-block; width: 36px; height: 2px; background: var(--amber);
   }
   .hero h1 {
     font-size: clamp(2.6rem, 5.6vw, 5.4rem);
@@ -592,7 +589,7 @@
     section { padding: 64px 20px; }
   }
   section.dark {
-    background: var(--cypress);
+    background: var(--cypress-deep);
     color: var(--bone);
   }
   section.cream-warm { background: var(--cream-warm); }
@@ -624,24 +621,22 @@
   .origin-bg {
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(98deg, rgba(15,26,20,0.94) 0%, rgba(15,26,20,0.74) 42%, rgba(15,26,20,0.20) 78%, rgba(15,26,20,0) 100%),
+      radial-gradient(ellipse at 50% 50%, rgba(7,16,11,0.88) 0%, rgba(7,16,11,0.74) 42%, rgba(7,16,11,0.45) 75%, rgba(7,16,11,0.30) 100%),
       url('assets/duo-nashville.jpg');
     background-size: cover;
-    background-position: center right;
+    background-position: center;
   }
   .origin-inner {
     position: relative;
     z-index: 1;
-    max-width: 1240px;
+    max-width: 760px;
     margin: 0 auto;
-    padding: 130px 32px;
-    display: grid;
-    grid-template-columns: 0.7fr 0.3fr;
-    gap: 48px;
-    align-items: center;
+    padding: 140px 32px;
+    text-align: center;
   }
-  .origin-text { max-width: 620px; }
+  .origin-text { max-width: 680px; margin: 0 auto; text-align: center; }
   .origin-text .section-headline { color: var(--bone); margin-bottom: 24px; }
+  .origin-text .section-eyebrow { color: var(--amber); }
   .origin-text p {
     font-size: 1.12rem;
     line-height: 1.7;
@@ -650,19 +645,21 @@
   }
   .origin-text p strong { color: var(--bone); font-weight: 600; }
   .origin-quote {
-    margin-top: 28px;
-    padding-left: 22px;
-    border-left: 3px solid var(--amber);
+    margin: 32px auto 0;
+    max-width: 580px;
+    padding: 18px 0 0;
+    border-top: 2px solid var(--amber);
     font-family: 'Caveat', cursive;
     font-weight: 500;
     font-size: 1.55rem;
     line-height: 1.4;
     color: var(--cream);
+    text-align: center;
   }
   .origin-quote span {
     display: block;
     font-family: 'Hanken Grotesk', sans-serif;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 600;
     color: var(--amber);
     text-transform: uppercase;
@@ -844,19 +841,21 @@
   }
   .event-card {
     position: relative;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    background: var(--ink);
+    background: var(--cypress);
     color: var(--bone);
     display: grid;
     grid-template-rows: 280px auto;
     isolation: isolate;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.2s ease, box-shadow 0.25s ease;
+    border: 1px solid rgba(239,232,218,0.08);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.35), 0 2px 6px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.2s ease;
   }
   .event-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 44px rgba(0,0,0,0.32);
+    border-color: rgba(199,110,42,0.35);
+    box-shadow: 0 22px 54px rgba(0,0,0,0.45), 0 4px 10px rgba(0,0,0,0.3);
   }
   /* Photo zone (top, fixed height across all four cards) */
   .event-card-photo {
@@ -1030,10 +1029,10 @@
     will-change: transform;
   }
   .marquee-row.row-a .marquee-track {
-    animation: marquee-left 38s linear infinite;
+    animation: marquee-left 90s linear infinite;
   }
   .marquee-row.row-b .marquee-track {
-    animation: marquee-right 44s linear infinite;
+    animation: marquee-right 110s linear infinite;
   }
   @keyframes marquee-left {
     0%   { transform: translateX(0); }
@@ -1408,7 +1407,7 @@
   /* ========== RESPONSIVE ========== */
   @media (max-width: 1024px) {
     .hero-inner { min-height: auto; padding-top: 16px; }
-    .origin-inner { grid-template-columns: 1fr; padding: 90px 28px; }
+    .origin-inner { padding: 96px 28px; }
     .genre-cards { grid-template-columns: 1fr; gap: 16px; }
     .genre-card { min-height: 280px; }
     .catalog-stat { padding: 22px 24px; }
@@ -1483,8 +1482,8 @@
     .venues-head { padding: 0 20px; }
     .marquee-rows { gap: 14px; }
     .marquee-track .name { padding: 0 28px; }
-    .marquee-row.row-a .marquee-track { animation-duration: 28s; }
-    .marquee-row.row-b .marquee-track { animation-duration: 34s; }
+    .marquee-row.row-a .marquee-track { animation-duration: 70s; }
+    .marquee-row.row-b .marquee-track { animation-duration: 84s; }
     .anthems { padding: 28px 20px 0; }
 
     .faq-cta-row .btn { flex: 1; min-width: 140px; }
@@ -1574,7 +1573,7 @@
       <div class="hero-eyebrow">Pembroke Pines, FL &middot; est. 2020</div>
       <h1>
         <span class="stack">From a Pier on the Lake</span>
-        <span class="stack">to Your <span class="accent">Wedding Dance Floor</span>.</span>
+        <span class="stack">to Your <span class="accent">Wedding Dance Floor</span></span>
       </h1>
       <p class="lede">South Florida's country-rock live band. A core acoustic duo plus an extended cast of vocalists, two original singles, and a 200-deep song catalog. We play weddings, breweries, private parties, and corporate events from Miami to the Blue Ridge.</p>
       <div class="hero-ctas">
@@ -1732,7 +1731,7 @@
 <!-- ========== THE BAND ========== -->
 <section id="band">
   <div class="container" style="text-align:center; max-width:760px; margin: 0 auto 12px;">
-    <div class="section-eyebrow">Five vocalists, two guitars, infinite harmonies</div>
+    <div class="section-eyebrow">A father-and-son duo, with backup</div>
     <h2 class="section-headline">Meet the Lineup.</h2>
     <p style="opacity:0.78; max-width:580px; margin:0 auto;">At the heart of Jake on the Lake is a father-and-son acoustic duo: <strong>Jake Valdes</strong> and his dad <strong>Danny</strong>, better known on stage as <strong>"The Other Guy"</strong>. Around that core, an extended cast of vocalists and instrumentalists folds in to scale the lineup to your event, from a quiet two-piece to a full band.</p>
   </div>
@@ -1809,7 +1808,7 @@
         </div>
       </article>
       <article class="event-card">
-        <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg');"></div>
+        <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg'); background-position: center 18%;"></div>
         <div class="event-card-body">
           <div class="badge">Tap-room nights</div>
           <h3>Breweries &amp; Bars</h3>
@@ -1818,7 +1817,7 @@
         </div>
       </article>
       <article class="event-card">
-        <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg');"></div>
+        <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg'); background-position: center 22%;"></div>
         <div class="event-card-body">
           <div class="badge">Birthdays, holidays, launches</div>
           <h3>Private &amp; Corporate</h3>
@@ -1896,13 +1895,11 @@
         <span class="name">Margaritaville</span><span class="sep">&#9733;</span>
         <span class="name">Islamorada Brewery</span><span class="sep">&#9733;</span>
         <span class="name">Rock &amp; Brews</span><span class="sep">&#9733;</span>
-        <span class="name">Dania Pointe</span><span class="sep">&#9733;</span>
         <span class="name">Buckley Vineyards</span><span class="sep">&#9733;</span>
         <!-- duplicate for seamless loop -->
         <span class="name">Margaritaville</span><span class="sep">&#9733;</span>
         <span class="name">Islamorada Brewery</span><span class="sep">&#9733;</span>
         <span class="name">Rock &amp; Brews</span><span class="sep">&#9733;</span>
-        <span class="name">Dania Pointe</span><span class="sep">&#9733;</span>
         <span class="name">Buckley Vineyards</span><span class="sep">&#9733;</span>
       </div>
     </div>
@@ -1910,15 +1907,11 @@
       <div class="marquee-track">
         <span class="name">Con Murphy's Ocean Bar</span><span class="sep">&#9733;</span>
         <span class="name">Plantation Walk</span><span class="sep">&#9733;</span>
-        <span class="name">Pembroke Pines</span><span class="sep">&#9733;</span>
-        <span class="name">Florida Keys</span><span class="sep">&#9733;</span>
-        <span class="name">Blue Ridge, GA</span><span class="sep">&#9733;</span>
+        <span class="name">Dania Pointe</span><span class="sep">&#9733;</span>
         <!-- duplicate for seamless loop -->
         <span class="name">Con Murphy's Ocean Bar</span><span class="sep">&#9733;</span>
         <span class="name">Plantation Walk</span><span class="sep">&#9733;</span>
-        <span class="name">Pembroke Pines</span><span class="sep">&#9733;</span>
-        <span class="name">Florida Keys</span><span class="sep">&#9733;</span>
-        <span class="name">Blue Ridge, GA</span><span class="sep">&#9733;</span>
+        <span class="name">Dania Pointe</span><span class="sep">&#9733;</span>
       </div>
     </div>
   </div>
