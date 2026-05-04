@@ -2470,22 +2470,6 @@
 
 <!-- ========== JS ========== -->
 <script>
-// ===== Force fresh page loads to start at the top =====
-// Disables browser scroll restoration so refreshing doesn't dump you mid-page.
-// If there's a hash in the URL (e.g. someone deep-linked to #contact), we
-// honor that and scroll to that section. Otherwise, hard-pin to the top.
-if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
-}
-window.addEventListener('load', function() {
-  if (window.location.hash) {
-    var target = document.querySelector(window.location.hash);
-    if (target) target.scrollIntoView({ block: 'start' });
-  } else {
-    window.scrollTo(0, 0);
-  }
-});
-
 (function() {
   // ===== Nav scroll state =====
   const nav = document.getElementById('siteNav');
