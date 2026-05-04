@@ -549,6 +549,31 @@
     line-height: 1.5;
   }
   .schedule-foot p strong { font-weight: 700; opacity: 1; color: var(--ink); }
+  /* "View all shows" toggle, mobile only */
+  .schedule-toggle {
+    display: none;
+    max-width: 980px;
+    margin: 14px auto 0;
+    width: 100%;
+    background: var(--cream);
+    border: 1.5px solid rgba(27,20,16,0.18);
+    color: var(--ink);
+    padding: 14px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.92rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .schedule-toggle:hover { border-color: var(--amber); color: var(--amber); }
+  .schedule-toggle i { transition: transform 0.3s ease; }
+  .schedule-toggle.is-open i { transform: rotate(180deg); }
 
   /* Origin stats (replaces removed trust ribbon) */
   .origin-stats {
@@ -742,6 +767,19 @@
     text-transform: uppercase;
     margin-bottom: 8px;
   }
+  /* Collapsible card pattern (desktop = flat, mobile = accordion) */
+  .collapsible-card-trigger {
+    display: contents;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: default;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+  }
+  .collapsible-chevron { display: none; }
+  .collapsible-body { display: contents; }
   /* Catalog stat strip below the 3 cards */
   .catalog-stat {
     max-width: 1240px;
@@ -1367,47 +1405,33 @@
     color: var(--bone-mute);
   }
 
-  /* ========== STICKY MOBILE ACTION BAR (bottom) ========== */
-  .sticky-mobile-bar {
-    display: none;
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 90;
-    padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
-    background: rgba(7,16,11,0.96);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid var(--line-dark);
-    gap: 10px;
-  }
-  .sticky-mobile-bar a {
-    flex: 1;
-    text-align: center;
-    padding: 13px 12px;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .sticky-mobile-bar .sm-call {
-    background: rgba(239,232,218,0.1);
-    color: var(--cream);
-    border: 1px solid var(--line-dark);
-  }
-  .sticky-mobile-bar .sm-book {
-    background: var(--amber);
-    color: #fff;
-    box-shadow: 0 4px 14px rgba(199,110,42,0.42);
-  }
+  /* Sticky mobile bar removed per user feedback */
 
   /* ========== RESPONSIVE ========== */
   @media (max-width: 1024px) {
     .hero-inner { min-height: auto; padding-top: 16px; }
-    .origin-inner { padding: 96px 28px; }
+    /* Mobile: split origin into a clean photo block on top + text below on cypress-deep */
+    .origin { background: var(--cypress-deep); }
+    .origin-bg {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      height: 240px;
+      background-image: url('assets/origin-duo.jpg');
+      background-position: center 30%;
+    }
+    .origin-bg::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(7,16,11,0) 60%, var(--cypress-deep) 100%);
+    }
+    .origin-inner { padding: 36px 22px 56px; }
+    .origin-text { text-align: left; }
+    .origin-text .section-headline { text-align: left; font-size: 1.9rem; }
+    .origin-text .section-eyebrow { text-align: left; }
+    .origin-text p { font-size: 0.98rem; line-height: 1.6; }
+    .origin-quote { text-align: left; padding-left: 18px; padding-top: 0; padding-right: 0; border-top: none; border-left: 3px solid var(--amber); margin: 24px 0 0; }
+    .origin-stats { gap: 14px; margin: 24px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line-dark); border-bottom: none; }
     .genre-cards { grid-template-columns: 1fr; gap: 16px; }
     .genre-card { min-height: 280px; }
     .catalog-stat { padding: 22px 24px; }
@@ -1442,6 +1466,10 @@
     .origin-stats { grid-template-columns: 1fr 1fr; gap: 18px; }
     .origin-stat strong { font-size: 2rem; }
     .schedule-head { grid-template-columns: 1fr; }
+    /* Mobile: collapse to first 2 shows; toggle button reveals the rest */
+    .schedule-list .show-row:nth-child(n+3) { display: none; }
+    .schedule-list.is-expanded .show-row { display: grid; }
+    .schedule-toggle { display: inline-flex; }
     .schedule-head .left { order: 1; }
     .show-row { grid-template-columns: 72px 1fr; gap: 16px; padding: 18px 18px; }
     .show-cta { grid-column: 1 / -1; justify-self: stretch; justify-content: center; padding: 12px; }
@@ -1456,26 +1484,139 @@
     .origin-text p { font-size: 1.02rem; }
     .origin-quote { font-size: 1.3rem; }
 
-    .genre-cards { gap: 14px; }
-    .genre-card { padding: 26px 22px; min-height: 240px; }
-    .genre-card h3 { font-size: 1.7rem; }
+    /* Mobile collapsible genre cards */
+    .genre-cards { gap: 12px; }
+    .genre-card { padding: 0; min-height: auto; display: block; }
+    .genre-card:hover { transform: none; box-shadow: none; }
+    .genre-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      width: 100%;
+      padding: 18px 20px;
+      cursor: pointer;
+    }
+    .genre-trigger-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+    .genre-trigger-text .badge { margin-bottom: 0; }
+    .genre-trigger-text h3 { margin-bottom: 0; font-size: 1.5rem; }
+    .genre-card .collapsible-chevron {
+      display: block;
+      color: var(--amber);
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    .genre-card.is-open .collapsible-chevron { transform: rotate(180deg); }
+    .genre-card .collapsible-body {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease;
+      padding: 0 20px;
+    }
+    .genre-card.is-open .collapsible-body {
+      max-height: 600px;
+      padding: 4px 20px 22px;
+      border-top: 1px solid var(--line-dark);
+    }
+    .genre-card .desc { margin-bottom: 14px; padding-top: 14px; }
+    .genre-card .artists { margin-top: 0; padding-top: 14px; }
+
     .catalog-stat { flex-direction: column; align-items: flex-start; padding: 20px; gap: 14px; }
     .catalog-stat .btn { width: 100%; }
 
-    .band-leads { grid-template-columns: 1fr; gap: 14px; }
-    .band-card.lead { aspect-ratio: 4/3; }
-    .band-card.lead .meta h3 { font-size: 1.7rem; }
-    .band-supporting { display: flex; gap: 14px; overflow-x: auto; padding: 8px 4px 16px; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    /* Mobile: Jake + Danny side-by-side, supporting members in horizontal scroll below */
+    .band-leads { grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 28px; }
+    .band-card.lead { aspect-ratio: 3/4; }
+    .band-card.lead .meta { padding: 14px 12px 12px; }
+    .band-card.lead .meta h3 { font-size: 1.05rem; line-height: 1; }
+    .band-card.lead .meta .role { font-size: 0.62rem; letter-spacing: 0.06em; line-height: 1.3; }
+    .band-supporting { display: flex; gap: 10px; overflow-x: auto; padding: 6px 4px 14px; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
     .band-supporting::-webkit-scrollbar { display: none; }
-    .band-card.supporting { flex: 0 0 60%; min-width: 0; scroll-snap-align: center; }
+    .band-card.supporting { flex: 0 0 38%; min-width: 0; scroll-snap-align: start; aspect-ratio: 3/4; }
+    .band-card.supporting .meta { padding: 12px 10px 10px; }
+    .band-card.supporting .meta h3 { font-size: 0.92rem; }
+    .band-card.supporting .meta .role { font-size: 0.6rem; }
 
-    .events-grid { grid-template-columns: 1fr; gap: 16px; }
-    .event-card { grid-template-rows: 220px auto; }
-    .event-card .event-card-body { padding: 22px 22px 22px; }
-    .event-card h3 { font-size: 1.7rem; }
+    /* Mobile: collapsible event cards. Photo hidden by default; tap title to expand. */
+    .events-grid { grid-template-columns: 1fr; gap: 12px; }
+    .event-card {
+      display: block;
+      grid-template-rows: none;
+    }
+    .event-card .event-card-photo {
+      display: none;
+      height: 220px;
+    }
+    .event-card.is-open .event-card-photo { display: block; }
+    .event-card .event-card-body {
+      padding: 0;
+      border-top: none;
+    }
+    .event-card.is-open .event-card-body {
+      border-top: 2px solid var(--amber);
+    }
+    .event-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 14px;
+      padding: 18px 20px;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+      color: inherit;
+      text-align: left;
+      font: inherit;
+    }
+    .event-trigger-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      min-width: 0;
+    }
+    .event-trigger-text .badge { margin-bottom: 0; }
+    .event-trigger-text h3 { font-size: 1.5rem; margin-bottom: 0; }
+    .event-card .collapsible-chevron {
+      display: block;
+      color: var(--amber);
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    .event-card.is-open .collapsible-chevron { transform: rotate(180deg); }
+    .event-card .collapsible-body {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.32s ease, padding 0.32s ease;
+      padding: 0 20px;
+    }
+    .event-card.is-open .collapsible-body {
+      max-height: 400px;
+      padding: 12px 20px 20px;
+    }
 
-    .original-card { grid-template-columns: 110px 1fr; gap: 16px; padding: 20px; }
-    .original-art { width: 110px; height: 110px; }
+    /* Mobile: stack cover on top, then meta, with stream buttons as a 2x2 grid */
+    .original-card { grid-template-columns: 1fr; gap: 18px; padding: 22px 22px 24px; text-align: center; }
+    .original-art { width: 200px; height: 200px; margin: 0 auto; }
+    .original-meta { text-align: center; }
+    .original-meta .release { text-align: center; }
+    .stream-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .stream-link { justify-content: center; padding: 11px 12px; font-size: 0.86rem; }
     .original-meta h3 { font-size: 1.5rem; }
 
     .venues-section { padding: 64px 0; }
@@ -1494,8 +1635,7 @@
     .footer-inner { grid-template-columns: 1fr; gap: 28px; }
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
 
-    .sticky-mobile-bar { display: flex; }
-    body { padding-bottom: 76px; }
+    /* Sticky mobile bar removed per user feedback */
   }
 
   @media (max-width: 420px) {
@@ -1657,6 +1797,10 @@
       <a href="#contact" class="show-cta">Get Details <i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
+  <button class="schedule-toggle" id="scheduleToggle" type="button" aria-expanded="false" aria-controls="scheduleList">
+    <span class="schedule-toggle-label">View All <span id="scheduleHiddenCount">4</span> Upcoming Shows</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </button>
   <div class="schedule-foot">
     <p><strong>Don't see your city?</strong> We book private shows year-round: weddings, breweries, vineyards, corporate. Tap "Book the Band" and tell us your event.</p>
     <a href="#contact" class="btn btn-sm"><i class="fa-solid fa-calendar-plus"></i> Book the Band</a>
@@ -1693,31 +1837,52 @@
     <p>Country-rock is home base. That's how Jake plays it on the dock and how we built our two originals, "Nights in Nashville" and "Sucks to Be So Miserable." For weddings and corporate events, we lean into the rock and pop sides of the catalog so every guest hears something they know.</p>
   </div>
   <div class="genre-cards">
-    <article class="genre-card">
-      <div class="badge">Our home base</div>
-      <h3>Country &amp; Country-Rock</h3>
-      <p class="desc">From Zac Brown harmonies to modern country radio. Our two originals live here. Acoustic for ceremonies, full band for receptions.</p>
-      <div class="artists">
-        <span class="artists-label">Representative artists</span>
-        Zac Brown Band &middot; Eric Church &middot; Morgan Wallen &middot; Tyler Childers &middot; Old Dominion &middot; Luke Combs &middot; Chris Stapleton
+    <article class="genre-card collapsible-card">
+      <button type="button" class="collapsible-card-trigger genre-trigger" aria-expanded="false">
+        <span class="genre-trigger-text">
+          <span class="badge">Our home base</span>
+          <h3>Country &amp; Country-Rock</h3>
+        </span>
+        <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+      </button>
+      <div class="collapsible-body">
+        <p class="desc">From Zac Brown harmonies to modern country radio. Our two originals live here. Acoustic for ceremonies, full band for receptions.</p>
+        <div class="artists">
+          <span class="artists-label">Representative artists</span>
+          Zac Brown Band &middot; Eric Church &middot; Morgan Wallen &middot; Tyler Childers &middot; Old Dominion &middot; Luke Combs &middot; Chris Stapleton
+        </div>
       </div>
     </article>
-    <article class="genre-card">
-      <div class="badge">Crowd movers</div>
-      <h3>Rock</h3>
-      <p class="desc">Tom Petty staples, Eagles harmonies, classic rock anthems and modern indie. Our go-to second-half-of-the-night material at receptions.</p>
-      <div class="artists">
-        <span class="artists-label">Representative artists</span>
-        Tom Petty &middot; Eagles &middot; Fleetwood Mac &middot; Mumford &amp; Sons &middot; The Killers &middot; Hozier &middot; Black Crowes &middot; Kings of Leon
+    <article class="genre-card collapsible-card">
+      <button type="button" class="collapsible-card-trigger genre-trigger" aria-expanded="false">
+        <span class="genre-trigger-text">
+          <span class="badge">Crowd movers</span>
+          <h3>Rock</h3>
+        </span>
+        <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+      </button>
+      <div class="collapsible-body">
+        <p class="desc">Tom Petty staples, Eagles harmonies, classic rock anthems and modern indie. Our go-to second-half-of-the-night material at receptions.</p>
+        <div class="artists">
+          <span class="artists-label">Representative artists</span>
+          Tom Petty &middot; Eagles &middot; Fleetwood Mac &middot; Mumford &amp; Sons &middot; The Killers &middot; Hozier &middot; Black Crowes &middot; Kings of Leon
+        </div>
       </div>
     </article>
-    <article class="genre-card">
-      <div class="badge">For the dance floor</div>
-      <h3>Pop</h3>
-      <p class="desc">Top-40 covers reimagined acoustic or full-band. The "every-guest-knows-the-words" tier of the set list, sized to your room and your ages.</p>
-      <div class="artists">
-        <span class="artists-label">Representative artists</span>
-        Bruno Mars &middot; Ed Sheeran &middot; Adele &middot; Maroon 5 &middot; Taylor Swift &middot; Olivia Rodrigo &middot; Justin Bieber &middot; Dua Lipa
+    <article class="genre-card collapsible-card">
+      <button type="button" class="collapsible-card-trigger genre-trigger" aria-expanded="false">
+        <span class="genre-trigger-text">
+          <span class="badge">For the dance floor</span>
+          <h3>Pop</h3>
+        </span>
+        <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+      </button>
+      <div class="collapsible-body">
+        <p class="desc">Top-40 covers reimagined acoustic or full-band. The "every-guest-knows-the-words" tier of the set list, sized to your room and your ages.</p>
+        <div class="artists">
+          <span class="artists-label">Representative artists</span>
+          Bruno Mars &middot; Ed Sheeran &middot; Adele &middot; Maroon 5 &middot; Taylor Swift &middot; Olivia Rodrigo &middot; Justin Bieber &middot; Dua Lipa
+        </div>
       </div>
     </article>
   </div>
@@ -1798,40 +1963,68 @@
       <h2 class="section-headline">Events We Play.</h2>
     </div>
     <div class="events-grid">
-      <article class="event-card">
+      <article class="event-card collapsible-card">
         <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_cd8e95083b554af6a4768c8a7398f68f~mv2.jpg');"></div>
         <div class="event-card-body">
-          <div class="badge">Our biggest stage</div>
-          <h3>Weddings</h3>
-          <p>Acoustic ceremony, cocktail trio, full-band reception. All three with the same musicians. Your first-dance song, your father-daughter pick, your last-call sing-along: all live, all custom.</p>
-          <a href="#contact" class="micro-cta" data-event-link="wedding">Plan a wedding set <i class="fa-solid fa-arrow-right"></i></a>
+          <button type="button" class="collapsible-card-trigger event-trigger" aria-expanded="false">
+            <span class="event-trigger-text">
+              <span class="badge">Our biggest stage</span>
+              <h3>Weddings</h3>
+            </span>
+            <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+          </button>
+          <div class="collapsible-body event-card-detail">
+            <p>Acoustic ceremony, cocktail trio, full-band reception. All three with the same musicians. Your first-dance song, your father-daughter pick, your last-call sing-along: all live, all custom.</p>
+            <a href="#contact" class="micro-cta" data-event-link="wedding">Plan a wedding set <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
       </article>
-      <article class="event-card">
+      <article class="event-card collapsible-card">
         <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_d7ba295988dc460b94931a447ea8e266~mv2.jpg'); background-position: center 0%;"></div>
         <div class="event-card-body">
-          <div class="badge">Tap-room nights</div>
-          <h3>Breweries &amp; Bars</h3>
-          <p>3-hour high-energy sets, our own PA. Already regulars at Islamorada Brewery, Rock &amp; Brews, and Con Murphy's.</p>
-          <a href="#contact" class="micro-cta" data-event-link="brewery">Book the bar set <i class="fa-solid fa-arrow-right"></i></a>
+          <button type="button" class="collapsible-card-trigger event-trigger" aria-expanded="false">
+            <span class="event-trigger-text">
+              <span class="badge">Tap-room nights</span>
+              <h3>Breweries &amp; Bars</h3>
+            </span>
+            <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+          </button>
+          <div class="collapsible-body event-card-detail">
+            <p>3-hour high-energy sets, our own PA. Already regulars at Islamorada Brewery, Rock &amp; Brews, and Con Murphy's.</p>
+            <a href="#contact" class="micro-cta" data-event-link="brewery">Book the bar set <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
       </article>
-      <article class="event-card">
+      <article class="event-card collapsible-card">
         <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_1439c7be6482473bb571651e30f5e8aa~mv2.jpg'); background-position: center 0%;"></div>
         <div class="event-card-body">
-          <div class="badge">Birthdays, holidays, launches</div>
-          <h3>Private &amp; Corporate</h3>
-          <p>Backyards, ballrooms, boats. Scaled to your room, from a quiet acoustic duo to the full extended band.</p>
-          <a href="#contact" class="micro-cta" data-event-link="private">Plan the night <i class="fa-solid fa-arrow-right"></i></a>
+          <button type="button" class="collapsible-card-trigger event-trigger" aria-expanded="false">
+            <span class="event-trigger-text">
+              <span class="badge">Birthdays, holidays, launches</span>
+              <h3>Private &amp; Corporate</h3>
+            </span>
+            <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+          </button>
+          <div class="collapsible-body event-card-detail">
+            <p>Backyards, ballrooms, boats. Scaled to your room, from a quiet acoustic duo to the full extended band.</p>
+            <a href="#contact" class="micro-cta" data-event-link="private">Plan the night <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
       </article>
-      <article class="event-card">
+      <article class="event-card collapsible-card">
         <div class="event-card-photo" style="background-image:url('https://static.wixstatic.com/media/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg/v1/fill/w_1200,h_800,al_c,q_85/bddd6a_28c501ea8bc5442e90f49d54ef69d64d~mv2.jpg');"></div>
         <div class="event-card-body">
-          <div class="badge">We travel</div>
-          <h3>Vineyards &amp; Festivals</h3>
-          <p>Florida Keys, Naples, Fort Myers, Orlando, and the Blue Ridge Mountains of Georgia. Already played Buckley Vineyards.</p>
-          <a href="#contact" class="micro-cta" data-event-link="vineyard">Bring us out <i class="fa-solid fa-arrow-right"></i></a>
+          <button type="button" class="collapsible-card-trigger event-trigger" aria-expanded="false">
+            <span class="event-trigger-text">
+              <span class="badge">We travel</span>
+              <h3>Vineyards &amp; Festivals</h3>
+            </span>
+            <i class="fa-solid fa-chevron-down collapsible-chevron"></i>
+          </button>
+          <div class="collapsible-body event-card-detail">
+            <p>Florida Keys, Naples, Fort Myers, Orlando, and the Blue Ridge Mountains of Georgia. Already played Buckley Vineyards.</p>
+            <a href="#contact" class="micro-cta" data-event-link="vineyard">Bring us out <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
       </article>
     </div>
@@ -2109,11 +2302,6 @@
   </div>
 </footer>
 
-<!-- Sticky mobile bar -->
-<div class="sticky-mobile-bar" id="stickyBar">
-  <a href="tel:+13059657311" class="sm-call"><i class="fa-solid fa-phone-volume"></i> Call Jake</a>
-  <a href="#contact" class="sm-book"><i class="fa-solid fa-calendar-check"></i> Book the Band</a>
-</div>
 
 <!-- ========== JSON-LD: MusicGroup + LocalBusiness combo ========== -->
 <script type="application/ld+json">
@@ -2274,6 +2462,39 @@
       }
     });
   });
+
+  // ===== Schedule mobile toggle =====
+  (function() {
+    const toggle = document.getElementById('scheduleToggle');
+    const list = document.getElementById('scheduleList');
+    const countEl = document.getElementById('scheduleHiddenCount');
+    if (!toggle || !list) return;
+    const total = list.querySelectorAll('.show-row').length;
+    if (countEl) countEl.textContent = Math.max(0, total - 2);
+    toggle.addEventListener('click', () => {
+      const open = list.classList.toggle('is-expanded');
+      toggle.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.querySelector('.schedule-toggle-label').textContent = open
+        ? 'Show Fewer Dates'
+        : `View All ${total} Upcoming Shows`;
+    });
+  })();
+
+  // ===== Mobile collapsible cards (genres + events) =====
+  (function() {
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+    document.querySelectorAll('.collapsible-card-trigger').forEach(trigger => {
+      trigger.addEventListener('click', e => {
+        if (!isMobile()) return;
+        const card = trigger.closest('.collapsible-card');
+        if (!card) return;
+        e.preventDefault();
+        const open = card.classList.toggle('is-open');
+        trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+  })();
 
   // ===== FAQ accordion =====
   document.querySelectorAll('.accordion-header').forEach(btn => {
